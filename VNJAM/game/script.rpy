@@ -3,71 +3,96 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define bea = Character("Beatrice", color="ffcc00")
-define bat = Character("Battler", color="ff0000")
+define d = Character("Daisy", color="3AA2DF")
+define d_thoughts = Character("Daisy", color="3AA2DF", what_italic=True)
 
-image beatrice cackle = Image("beatrice cackle.png", oversample = 0.5)
-image beatrice neutral = Image("beatrice neutral.png", oversample = 0.5)
-image beatrice pout = Image("beatrice pout.png", oversample = 0.5)
-image beatrice smirk = Image("beatrice smirk.png", oversample = 0.5)
-image beatrice smile = Image("beatrice smile.png", oversample = 0.5)
+define s = Character("Samyaza", color="DB9B66")
 
-image battler neutral = Image("battler neutral.png", oversample = 0.5)
-image battler objection = Image("battler objection.png", oversample = 0.5)
-image battler foolish = Image("battler foolish.png", oversample = 0.5)
-image battler smile = Image("battler smile.png", oversample = 0.5)
+define unknown = Character("???", color="DB9B66")
 
-image witch room = Image("witch room.webp", oversample = .3)
-
-transform superleft:
-    xpos -400
-
-image deltarune fountain = Movie(
-    play="images/deltarune fountain.ogg",
-    size=(1920, 1080)
-)
-image lines = Movie(
-    play="images/lines.webm",
-    size=(1920, 1080)
-)
+define audio.sad_music = "audio/by_your_side.ogg"
 
 # The game starts here.
 
 
 label start:
 
-    scene witch room
+
+    play music wav_by_your_side
+
+    scene black screen with fade
+
+    d_thoughts "The stale air of the hallway was suffocating.{w} The scent of wet carpet and dust filled my nose as I tried to shut out all of the sounds of the oncoming students jestering with their peers."
+    d_thoughts " I wanted to rush home, I couldn’t stand the noise.{w} Honestly, it’s better for me to head home anyways.{w} Anya was getting tired of me." 
+    d_thoughts "I finally get to my door, it’s a simple two bedroom one bathroom.{w} Luckily the school is more accommodating since I started school a bit later than my peers."
+    d_thoughts "I hope my roommate is the same as me. or just someone who is never in the house too."
+
+    d_thoughts "The old door creaks open, piercing through the stillness of the apartment."# [descriptions] 
+    show daisy idle2 at left
+    d_thoughts "The AC was blasting. I put my bag down on the dining room chair. "
+
+    d_thoughts "I was about to sit down on the couch, until I saw the silhouette of a person right in the corner of my eye."
+
+    d_thoughts "I spun around to look behind me.{w} My heart beat out of my chest."
+
+    unknown "Hey, what took you so long?"
+
+    d_thoughts "What."
+
+    stop music
+
+
+    scene room daisy
+    d_thoughts "The light turns on. My eyes take a bit to adjust to the brightness."
+
+    d_thoughts "I stop in my tracks, like a doe in the headlights and make eye contact with a beautiful woman."
+
+    show angel idle2 at left
+
+    play music wav_blessing
+    unknown "I was going crazy thinking I was gonna live alone in this 2x1. Good thing you ended up filling this spot last minute. I was trying to ask them about you but they couldn’t say anything."
+
+    show daisy idle2 at right
+    d "Oh… uhm… right. Sorry I got the email but never reached out to you."
+
+    unknown "Email?"
+
+    d "Uhm… maybe they sent it to the wrong address or something…. {w}That happens to me too… sometimes.."
+
+    d_thoughts "She smiles at me, waiting for something." #" (her sprite changing to a blank smile)
+
+    d "Oh sorry, I’m Daisy."
+
+    s "I’m Samyaza, nice to meet you!"
+
+    return
+
+
+    
+'''
     play music fishy_aroma
+
+    scene room daisy with fade
+
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
-    show battler neutral at left 
-    bat "Where the fuck am I"
+    show daisy idle1 at left 
+    d "Where the fuck am I"
 
-    show beatrice smirk at right with Dissolve(1.0)
+    show angel idle1 at right with Dissolve(1.0)
     play audio cackle
 
-    show battler foolish at left 
-    bat "Oh god not this again"
+    d "Oh god not this again"
 
-    show beatrice smile at right
 
-    bea "What's the problem here?."
+    s "What's the problem here?."
 
-    show battler objection at superleft
-    bat "You killed my family a zillion times or something"
+    d "You killed my family a zillion times or something"
 
-    show beatrice smirk
     play audio cackle
 
-    bea "oh yea i did that"
+    s "oh yea i did that"
+'''
 
-    scene lines with dissolve
-    pause
-    show beatrice pout
-    pause
-
-    bea "oh what now"
-    # This ends the game.
-
-    return
+    
