@@ -52,13 +52,29 @@ image anya idle:
     "images/mob.png"
     zoom 0.4
     yoffset 100
-
+image angel idle:
+    "images/angel idle.png"
+    zoom 0.4
+    yoffset 100
+image angel shadowed:
+    "images/angel shadowed.png"
+    zoom 0.4
+    yoffset 100
 image black_alpha:
     "images/black screen.png"
     alpha 0.5
+layeredimage yuri_living_room_night:
+    always:
+        "black screen.png"
+    always:
+        "yuri_living_room.png"
+        alpha 0.5
+
 
 transform flip:
     xzoom -1.0
+transform unflip:
+    xzoom 1.0
 label start:
 
     #EXT. UNIVERSITY PARK - DAY
@@ -134,9 +150,9 @@ label start:
 
     a "Don’t worry! I’ll just make sure to check up on you."
     hide anya
-    show daisy idle at flip,scene_center
+    show daisy idle at scene_center
     d_thoughts "I look away, deciding to focus on the leaves as they sway. I hate that I have to acknowledge that Anya looks down on me. "
-    show anya idle at scene_center_offright, flip
+    show anya idle at scene_center_offright
     extend "She leans in and smiles at me. It feels like a sneer."
 
     d_thoughts "My entire body sinks. Bitter feelings gnaw at my heart. I try to tune back into Anya’s lecture but I can’t ignore the resentment. I wish I could be her equal, but I’ve let myself fall behind."
@@ -153,47 +169,115 @@ label start:
     scene black screen with dissolve
 
     d_thoughts "The stale air of the hallway was suffocating.{w} The scent of wet carpet and dust filled my nose as I tried to shut out all of the sounds of the oncoming students jestering with their peers."
-    d_thoughts " I wanted to rush home, I couldn’t stand the noise.{w} Honestly, it’s better for me to head home anyways.{w} Anya was getting tired of me." 
+    d_thoughts "I wanted to rush home, I couldn’t stand the noise.{w} Honestly, it’s better for me to head home anyways.{w} Anya was getting tired of me." 
     d_thoughts "I finally get to my door, it’s a simple two bedroom one bathroom.{w} Luckily the school is more accommodating since I started school a bit later than my peers."
-    d_thoughts "I hope my roommate is the same as me. or just someone who is never in the house too."
+    d_thoughts "I hope my roommate is the same as me.{w} or at least just someone who is never in the house."
 
-    d_thoughts "The old door creaks open, piercing through the stillness of the apartment."# [descriptions] 
-    show daisy idle2 at left
-    d_thoughts "The AC was blasting. I put my bag down on the dining room chair. "
+    d_thoughts "Turning the door knob, a loud creaking greets my ears. The scent of old fabric and mildew wafts in from the AC, which is already running on full blast."
+    scene yuri_living_room with fade
+    d_thoughts "My pupils adjust to the brightness in the apartment."
 
-    d_thoughts "I was about to sit down on the couch, until I saw the silhouette of a person right in the corner of my eye."
+    d_thoughts "Huh..? I don’t remember leaving the lights on when I left."
 
-    d_thoughts "I spun around to look behind me.{w} My heart beat out of my chest."
+    d_thoughts "...Whatever. I'm just tired. I'm going to turn the light off."
+    show black_alpha
+    
+    d_thoughts "The AC was blasting."
+    show daisy idle behind black_alpha at scene_right, flip with dissolve
+    d_thoughts " I put my bag down on the dining room chair. " #add extend here if u can figure out transitions
+
+    d_thoughts "I made my way to enjoy the living room. Finally, I can relax on a couch without being on edge."
+    #add sfx here 
+    show angel shadowed behind black_alpha at scene_center, flip with vpunch 
+    d_thoughts "A shadow in the corner of my eye leans towards me."
+    show daisy nervous at unflip
+    d_thoughts "A small yelp escapes from my mouth. Every single hair on my body that I forgot to pluck out just raised up. Fearfully, I {cps=*.25}slowly look up at the figure. My heart beats out of my chest.{/cps}"
 
     unknown "Hey, what took you so long?"
 
-    d_thoughts "What."
+    d_thoughts "What..?"
 
     stop music
 
 
-    scene room daisy
-    d_thoughts "The light turns on. My eyes take a bit to adjust to the brightness."
+    d_thoughts "I stop in my tracks like a doe in the headlights and make eye contact with the most beautiful woman I've ever seen. "
 
-    d_thoughts "I stop in my tracks, like a doe in the headlights and make eye contact with a beautiful woman."
+    show angel idle at scene_center
 
-    show angel idle2 at left
-
-    play music wav_blessing
+    d_thoughts "She stands tall before me, her strong build illuminated by the moonlight. I can’t make out her entire face right now, but she’s giving me a sweet smile and I can see the golden glint of her eyes through the darkness."
+    d_thoughts "I don’t know what it is about her, but her aura made my entire body go weak-{p}"
+    show daisy sappy
+    extend "I’m at her mercy."
+    show daisy anxious
+    d_thoughts "She stuns me. But, despite her beauty, my eyes went straight to her cross necklace. My stomach is in knots."
+    #play music wav_blessing
     unknown "I was going crazy thinking I was gonna live alone in this 2x1. Good thing you ended up filling this spot last minute. I was trying to ask them about you but they couldn’t say anything."
 
-    show daisy idle2 at right
     d "Oh… uhm… right. Sorry I got the email but never reached out to you."
 
     unknown "Email?"
 
-    d "Uhm… maybe they sent it to the wrong address or something…. {w}That happens to me too… sometimes.."
-
+    show daisy idle smile
+    d "Uhm… maybe they sent it to the wrong address or something…. {w}That happens to me too…{w} sometimes.."
+    show daisy idle
     d_thoughts "She smiles at me, waiting for something." #" (her sprite changing to a blank smile)
-
+    show daisy idle smile
     d "Oh sorry, I’m Daisy."
 
     s "I’m Samyaza, nice to meet you!"
+
+    show daisy idle #never smile for long!
+    d_thoughts "She confidently reaches her hand out… Her voice is a bit too loud for my liking, but that's fine, she seems nice otherwise. Hopefully I can stay out of her way."
+
+    d_thoughts "I shyly reach my hand out to hers, and she grips it with a vigorous smile and level of enthusiasm that is unnatural. She’s acting like a used car salesman, each shake felt performed. She seemed as if she was trying to be relaxed, but her smile twitched in exhaustion."
+
+    d_thoughts "She feels a bit more… sympathetic? Earlier today, I was practicing my greeting to Anya in the mirror. Performing my smile in the mirror to make sure there wasn't any underlying strangeness that she could pick up on."
+    d_thoughts "...I didn’t want to worry Anya with how bad things had been recently."
+
+    s "Cool.. You have such a cute face. Has anyone ever told you that?"
+
+    show daisy nervous
+    d "Thanks…. Uhm, I think so?"
+    show black screen behind daisy:
+        alpha 0.25
+    show angel idle behind black
+    d_thoughts "I shift uncomfortably, I really want to get back into my room and hide in bed. But no matter how much I try to break eye contact, my eyes just keep meeting with hers."
+    show black screen behind daisy:
+        alpha 0.5
+    d_thoughts "I know that she’s analyzing my face, each and every single one of my pores- my ugly acne scars, and my long overdue-to-be-tweezed eyebrows…"
+    show black screen behind daisy:
+        alpha 0.75
+    d_thoughts "She's already thinking about how terrible of a roommate I’m going to be, that I’ll be dirty and weird, how I probably won't wash the dishes, or can’t even socialize with her or her friends properly."
+    show black screen behind daisy:
+        alpha 1
+    show daisy crying
+    d_thoughts "I can already imagine it. She invites her new friends over, they’re loud as hell in the living room."
+    d_thoughts "I work up the courage to leave my room to get a glass of water, something to eat, anything- as soon as I step out they immediately go silent, briefly sneaking glances at me from the corners of their eyes. "
+    d_thoughts "The second I slam my door, they go back to laughing, whispering about how weird Samyaza’s roommate is."
+    d_thoughts "Quiet enough to feign ignorance (“We were talking about someone else!”- yeah right, bitch,) but loud enough that the roommate in question can still hear it even if she tries her absolute hardest to pretend they’re not there."
+    d_thoughts  "They’re absolutely hysterical, shrieking like hyenas over how weird Samyaza’s roommate is. She’d laugh and agree, and talk about how much she couldn’t wait to move out."
+    show daisy anxious
+    d_thoughts "I can’t let that happen this time. I have to prove to her that I’m good at all of these things.{p}That I can function as a human being for once."
+
+    hide black screen
+    s "Did you hear me? What’s your major?"
+    d "Uh. Oh, sorry. I’m undecided."
+
+#SAMYAZA (happy/genuine sprite)
+    s "Oh wow, really? Me too. There’s just so much to choose from, I couldn’t decide either. What classes are you taking? Hopefully we’ll have some together?"
+    show daisy idle
+    d_thoughts "I scroll briefly through my gallery and hand her my phone, on it a screenshot of my class schedule."
+    s "Aw man, only three. That {i}sucks{/i}."
+
+    d "Well… I’m only taking 4 classes anyways.. "
+    show daisy anxious
+    d_thoughts "I look down, hoping her energy dies down soon enough. I let out a long, loud, and very drawn out yawn. She’s still observing me."
+
+    s "Maybe I can switch into your fourth? I’d love to have a friend in all four classes."
+    
+    d_thoughts "A friend? I can’t believe this girl is already considering us to be friends. I feel bad for her, when she sees who the real me is, she’ll hop on over to whatever better, well-adjusted friend group she’ll make. I don’t know their faces yet, but I’ll know them soon enough."
+
+    d "Uh. Yea. That’s okay."
 
     return
 
