@@ -46,6 +46,18 @@ image daisy sappy:
     "images/daisy sappy.png"
     zoom 0.4
     yoffset 100
+image daisy blush:
+    "images/daisy neutral blush.png"
+    zoom 0.4
+    yoffset 100
+image daisy upset:
+    "images/daisy upset.png"
+    zoom 0.4
+    yoffset 100
+image daisy angry:
+    "images/daisy angry.png"
+    zoom 0.4
+    yoffset 100
 image daisy surprised:
     "images/daisy surprised.png"
     zoom 0.4
@@ -56,6 +68,32 @@ image angel idle:
     "images/angel idle.png"
     zoom 0.4
     yoffset 100
+
+image angel confused:
+    "images/angel confused.png"
+    zoom 0.4
+    yoffset 100
+image angel desire:
+    "images/angel desire.png"
+    zoom 0.4
+    yoffset 100
+image angel frown:
+    "images/angel frown.png"
+    zoom 0.4
+    yoffset 100
+image angel pain:
+    "images/angel pain.png"
+    zoom 0.4
+    yoffset 100
+image angel obsessed:
+    "images/angel obsessed.png"
+    zoom 0.4
+    yoffset 100
+image angel sad:
+    "images/angel sad.png"
+    zoom 0.4
+    yoffset 100
+
 image angel shadowed:
     "images/angel shadowed.png"
     zoom 0.4
@@ -155,7 +193,7 @@ label start:
 
     a "Don’t worry! I’ll just make sure to check up on you."
     hide anya
-    show daisy idle at scene_center
+    show daisy upset at scene_center
     "I look away, deciding to focus on the leaves as they sway. I hate that I have to acknowledge that Anya looks down on me. "
     show anya idle at scene_center_offright
     extend "She leans in and smiles at me. It feels like a sneer."
@@ -216,19 +254,22 @@ label start:
     show daisy anxious
     "She stuns me. But, despite her beauty, my eyes went straight to her cross necklace. My stomach is in knots."
     #play music wav_blessing
+    #sprite here
     unknown "I was going crazy thinking I was gonna live alone in this 2x1. Good thing you ended up filling this spot last minute. I was trying to ask them about you but they couldn’t say anything."
 
     d "Oh... uhm... right. Sorry I got the email but never reached out to you."
-
+    show angel confused
     unknown "Email?"
 
     show daisy idle smile
     d "Uhm... maybe they sent it to the wrong address or something.... {w}That happens to me too...{w} sometimes.."
+    #sprite here
+    show angel idle
     show daisy idle
     "She smiles at me, waiting for something." #" (her sprite changing to a blank smile)
     show daisy idle smile
     d "Oh sorry, I’m Daisy."
-
+    #sprite here
     s "I’m Samyaza, nice to meet you!"
 
     show daisy idle #never smile for long!
@@ -265,19 +306,22 @@ label start:
     "I can’t let that happen this time. I have to prove to her that I’m good at all of these things.{p}That I can function as a human being for once."
 
     hide black screen
+    show angel confused
     s "Did you hear me? What’s your major?"
     d "Uh. Oh, sorry. I’m undecided."
 
-#SAMYAZA (happy/genuine sprite)
+    #SAMYAZA (happy/genuine sprite)
     s "Oh wow, really? Me too. There’s just so much to choose from, I couldn’t decide either. What classes are you taking? Hopefully we’ll have some together?"
     show daisy idle
     "I scroll briefly through my gallery and hand her my phone, on it a screenshot of my class schedule."
+    show angel sad
     s "Aw man, only three. That {i}sucks{/i}."
 
     d "Well... I’m only taking 4 classes anyways.. "
     show daisy anxious
     "I look down, hoping her energy dies down soon enough. I let out a long, loud, and very drawn out yawn. She’s still observing me."
-
+    #sprite here?
+    show angel idle
     s "Maybe I can switch into your fourth? I’d love to have a friend in all four classes."
     
     "A friend? I can’t believe this girl is already considering us to be friends. I feel bad for her, when she sees who the real me is, she’ll hop on over to whatever better, well-adjusted friend group she’ll make. I don’t know their faces yet, but I’ll know them soon enough."
@@ -304,14 +348,15 @@ label start:
 
     show daisy anxious
     "..."
-
+    show angel confused
     s "..."
     "What is she waiting for?"
 
     s "What kind of foods do you like?"
 
     d "Uhh..{p}I don’t know, pasta I guess?"
-
+        #sprite here
+    show angel idle
     s "Before I had it, I swam for the first time too."
 
     d "Uhm, yea I’ve heard that there’s a lake nearby campus.. I think."
@@ -328,10 +373,13 @@ label start:
     "Starting a new leaf is nice... I think... Entertaining this makes my stomach hurt. But I kind of want her to like me..."
     "She’s a better listener than Anya. Even though my answers are curt, she treats each word as if it is better than the last."
     "Maybe my initial reaction was too cruel. I barely know this girl and I am already assuming the worst in her. I might be the worst person in the {b}world{/b}."
+    show daisy upset
     "I nip my lip in frustration. I could be extending some kindness to her, I could be trying to make conversation with her- but instead I act like everyone else I know."
     "The teeth on my lip sink in harder."
     "She’s so nice, and maybe that’s just for now- who knows. I can feel the familiar taste of copper on my tongue. My lip is trembling, but I don’t  really care about that right now. She’s probably just being nice to trick me, waiting for me to let my guard down and- "
+    
     #i wanna semi cry sprite here
+    show angel confused
     s "Hey? Are you alright? Your lip is bleeding."
     show daisy surprised
     d "{size=*1.2}Oh shit! {/size}Oh, I’m so sorry, don’t worry about me, I’ll go clean myself up in the bathroom."
@@ -345,23 +393,25 @@ label start:
         zpos -700
         xpos -450
         ypos -250
-
+    show angel desire
     "She is really close, her breaths are strong and steady as she applies the right amount of pressure on my lip."
     show daisy sappy
     "My breath stops in my throat."
     "I'm looking away, I’m looking away."
+    show angel idle
     "Her lips purse in concentration, my heart skips a bit."
     "No, no, no.. {w=0.5}she’s just my roommate.{p}That’s {b}all{/b}."
-
+    show angel frown
     s "That doesn’t look too bad. But you really have to be careful, alright? "
 
-
+    show daisy blush
+    show angel desire
     "Her breath heats up my face. Her finger is warmer than any others I’ve felt before. Her presence lights up the dark room, like a bright comforting light shining on me. Contemplative eyes penetrate each and every pore on my face."
     "Playing with my hair, I look away and try to distract myself. Just look away already! Stop staring at my face..!"
     show daisy nervous
     extend " I’m so ashamed, I hate how fiercely she's scanning into me. I want to curl up into a ball, and roll away."
 
-
+    show angel sad
     s "Alright, you should be fine now. Take care of yourself, Daisy, alright?"
 
 
@@ -438,21 +488,20 @@ label start:
     "Samyaza is up bright and early. She eats a strange resinous bread, and gives me a relaxed grin. I rub my eyes while I grab a cup of yogurt."
 
     s "Good morning, I was worried that you were going to miss class."
-    show daisy idle at scene_left with dissolve
+    show daisy blush at scene_left with dissolve
     d "Thanks.. But you really didn’t have to wait for me."
-
+    show daisy idle
     s "It’s no biggie."
-
+#sprite
     "She leans back on her chair and smiles, eating a piece of bread into her mouth. "
-
+    show daisy anxious
     "I can’t respond. I shove the yogurt into my mouth, the thick texture and sour taste stay stuck in my throat as I try to avoid her. Her eyes are so bright, almost like a blinding car headlight."
 
     "Once I finish with the yogurt, she quickly takes the bowl and spoon and puts it in the sink, and cleans it immediately."
 
-    show daisy anxious
     "Uh.. {w=0.5}you really didn’t have to do that, I’m ok with washing it."
 
-    #SAMYAZA (happy/genuine)
+    #SAMYAZA (happy/genuine) sprite
     s "Really, it’s no big deal. Just wanted to help."
     "Her smile shines on my face. It kind of hurts, it feels like I’m looking directly at the sun in the middle of a hot summer day."
 
@@ -464,7 +513,7 @@ label start:
 
     "As our class got out, I get up and yawn."
 
-    show daisy happy  at scene_right with dissolve
+    show daisy happy  at scene_right_far with dissolve
     d "Man, that was boring."
     show angel idle at scene_left with dissolve
     "Samyaza stares at me for a second, like the cogs in her brain are shifting.{p}She.. seems to be genuinely thinking about.. something? It’s kind of hard to read her expression right now."
@@ -481,7 +530,7 @@ label start:
 
     "The familiar pang of anxiety and shame wells up inside of me, my face must be bright as a tomato right now.."
     d "Guess I just can't do {i}anything{/i} today, huh!"
-
+#sprite
     "Samyaza smirks at me, creasing her eyes and showing her teeth."
 
     s "Nah, it wasn’t boring."
@@ -491,23 +540,21 @@ label start:
     s "It was SUPER boring."
     show daisy anxious
     d "You really didn’t ha-{w=1}{nw}"
-
+    show angel desire
     s "{b}I want to.{/b}"
-
+    show daisy sappy
     "My eyes widen as if they are going to burst out of my skull."
 
-
+    show daisy blush
     s "That’s what roomies are for..{w=0.5} Right?"
-
-    "She nonchalantly grins."
-    show daisy at unflip, scene_left_far
-    show angel idle at scene_center_offleft
+    #sprite
+    "She nonchalantly grins." #cut this line?
+    show daisy at unflip,  scene_right_far
+    show angel at flip, scene_center_offright with moveinright
     camera:
         perspective True
-        zpos -700
-        xpos -450
-        ypos -250
-    
+        linear 1.0 zpos -700 xpos 450 ypos -250
+    show daisy blush
     "As she wraps her arms around me, into a hug, my face moves on its own, contorting into a matching smile as my hands lay flat by my side."
 
 
@@ -576,7 +623,7 @@ label start:
 
         #ANYA (smile sprite)
     a "Duhh!"
-
+    show daisy blush
     d "You remembered?"
     show daisy happy
     "Anya noogies me."
@@ -628,14 +675,16 @@ label start:
     show black alpha behind daisy
     show angel behind black
     extend " I feel like a sore thumb."
-    "Could I really live a normal college life? I stare at the sandwich. I shouldn't eat this, I don’t belong here."
-
-    "Samyaza brings the sandwich to my mouth, but it just falls against my cheek."
-
-    "I’m such an alien, and aliens don’t eat human food. "
     show daisy nervous
+    "Could I really live a normal college life? I stare at the sandwich. I shouldn't eat this, I don’t belong here."
+#sprite
+    "Samyaza brings the sandwich to my mouth, but it just falls against my cheek."
+    show angel sad
+    "I’m such an alien, and aliens don’t eat human food. "
+    show daisy upset
     "The physical weight of my body takes up the space, suffocating everyone else enjoying their day outside."
     hide black
+    show angel desire
     "Samyaza opens my mouth{nw} "
     show daisy surprised
     extend "like she’s opening a trash chute and puts the sandwich in it."
@@ -655,9 +704,9 @@ label start:
 
     show daisy anxious at scene_left with dissolve
     d "I’m really sorry for being unable to help…"
-
+#sprite
     s "No worries, sit your pretty little self down. Ladies shouldn’t do this work."
-    show daisy sappy
+    show daisy blush
     "I bite my nails and enjoy the view."
 
     scene yuri_living_room_night with Fade(1.0,1.0,1.0)
@@ -682,9 +731,9 @@ label start:
     s "Daisy, how was your day?"
 
     "I don’t deserve to talk to her until I finish. I focus in on my laptop screen."
-
+    show angel confused
     s "Daisy?"
-
+    show daisy angry
     d "Sorry, I’m busy."
 
     s "You wanna chat about your day while you work on your thing?"
@@ -692,22 +741,24 @@ label start:
     d "No."
 
     #SAMYAZA (frown sprite)
+    show angel sad
     s "Aw, you sure?"
 
     "I stop typing."
-    show daisy at flip, scene_left_far
-    show angel idle at scene_center_offleft with moveinleft
+    show daisy upset at flip, scene_left_far
+    show angel at scene_center_offleft with moveinleft
     camera:
         perspective True
         linear 1.0 zpos -600 xpos -450  ypos -250
     "Samyaza sits down in front of me."
-
+    
      
     s "Come on, tell me about your day."
     hide black with dissolve
-
+#sprite
+    show angel idle
     "She softly grins, leans forward and holds her face in anticipation."
-
+    show daisy anxious
     "I take my hands off of the keyboard, and rub my fingers together. I am completely blank, how {i}was{/i} my day?"
     show black alpha behind daisy
     show angel behind black
@@ -716,13 +767,13 @@ label start:
     s "Sooo? "
 
     d "Uh.. sorry! Uhm, it was okay… I guess."
-
+#sprite
     "Her lips flatline, as she tilts her head. She gets a little closer to me."
 
     s "{cps=*.25}Andd…?{/cps}"
 
     d "I…{p=1} I really need to get back to work."
-
+    show angel frown
     "Samyaza slowly closes my laptop until it’s halfway open."
     show daisy surprised
     d "Hey!"
@@ -730,7 +781,8 @@ label start:
     s "I’ll open it up again… once you tell me about your day!"
 
     d "I mean, I studied then I scrapbooked."
-
+#sprite
+    show angel idle
     s "…Scrapbooked? Do tell."
     show daisy anxious
     "I sink into my feet, and rub my hands with more intensity, I want  to feel any sort of friction. In the back of my mind, the project feels like an unbearable itch that I can’t scratch."
@@ -740,7 +792,7 @@ label start:
     s "And? How was the coffee?"
 
     d "It was okay. Nothing to write home about."
-
+#sprite
     s "What did you get?"
     
     d "Just an iced vanilla latte. I  really wanted to try this place cause I know they have specialty beans."
@@ -748,47 +800,52 @@ label start:
 
     s "The?"
 
-    show daisy idle
+    show daisy angry
     d "Samyaza. I really need to do this assignment. It's due {b}soon.{/b}"
-
+    show angel sad
     s "Make sure to talk to me after, okay? It’s so lonely here."
 
     "I hesitate to open up my laptop."
 
     d "Yeah..{w=0.5} it really can be."
-
+    
     "I open up my laptop. I don’t know how but thirty minutes have passed."
     "I checked my phone, for some reason the ringer didn’t go off at all."
     "My classmates spammed me with multiple inquisitive texts. "
     show daisy surprised
     d "Holy shit."
-
+    show angel confused
     s "What?"
-    show daisy nervous
+    show daisy upset
     d "Oh man, I totally fucked up."
 
     show angel at scene_center_offleft
     "Samyaza leans further in."
     "Just go away!"
     "I press into my skin, holding myself back from swatting her away."
-
+    show angel frown
     "Samyaza gets up, her face close to mine."
 
     s "What happened?? Tell me??"
     show daisy crying
     "I scream and pull my hair. I so desperately want to curse her out but I only pathetically groan. I knew it. I knew it, I knew it, I knew it. This is what she was trying to do all along."
-
+    show angel confused
     "Samyaza gets up in my face, her hand brushes against mine and I push her away."
 
-    #DAISY (angry)
+    show daisy angry
     "Ugh… it’s because of you! They {b}hate{/b} me because of you!"
 
-    #SAMYAZA (panicked)
-    "Huh- What do you mean?! I don’t understand! I can’t help you if I don’t know what’s going on!!"
+    s "Huh- What do you mean?! I don’t understand! I can’t help you if I don’t know what’s going on!!"
 
     show daisy at offscreenleft with moveinright
     "I turn my laptop off and run into my room. I shut the door behind me. "
+
+
     hide daisy
+
+    #lingerrr
+    show angel sad
+    pause 1.0
     scene black screen with Dissolve(0.5)
     camera:
         perspective False
@@ -888,8 +945,10 @@ label start:
     "The light instantly goes out, Samyaza coughs and wheezes, like something big is coming out of her.."
 
     scene yuri_bathroom_01
-    show daisy anxious at scene_left
-    show angel idle at scene_right
+    show daisy anxious at scene_left, flip
+    show angel pain at scene_right
+
+
     "I tentatively open my eyes- her eyes are red, with a less vibrant light seeping out of her orifices. Her veins are pulsating and golden."
 
     camera:
@@ -901,27 +960,27 @@ label start:
     "Timidly, my head makes its way to the mirror.. Some sort of… sigil like drawing. A large circle with strange lettering was drawn with lipstick."
 
     "Samyaza weakly clenches onto my hand, she gently pets my burn mark. Still feeling the residual heat, I bite my lip to hold in the pain."
-
+    show angel sad
     s "…We should do something about this…"
 
     show daisy nervous
     "I sigh, exhaustion catches up to me.{nw} "
-    show daisy sappy
+    show daisy blush at scene_center_offright with moveinleft
     extend "Maybe that sigil has some sort of effect on me too, because I sheepishly lay  my head on her shoulder."
 
     "I’m so selfish, but I don’t care.{w=1} She lights a fire within me.{w=.5} I want the heat to melt us into each other at this moment."
 
 #INT. APARTMENT LIVING ROOM - NIGHT
-    scene black screen
+    scene black screen with dissolve
 
     camera:
         perspective True
         zpos -600 xpos -450  ypos -250
     scene yuri_living_room_night 
     show daisy anxious at flip, scene_left_far
-    show angel idle at scene_center_offleft, flip
+    show angel sad at scene_center_offleft, flip
     show black screen
-    hide black screen with fade
+    hide black screen with dissolve
     "Samyaza sits, she’s hunched over, still catching her breath. Her exhaustion is palpable"
 
     "I walk over, handing her a warm cup of tea. I’m so useless, I can never really help people. I want to do more for her, but I’m still frazzled from whatever the hell just happened. I dig my nails into my legs."
@@ -931,7 +990,7 @@ label start:
 
     d "…."
 
-    s "Really, it’s not your fault"
+    s "Really, it’s not your fault."
 
     #DAISY (sad gay puppy eye etc sprite)
     show daisy anxious
@@ -957,13 +1016,13 @@ label start:
 
     "My expression is unchanged. Trust me Samyaza,{i} whatever it is {/i}, it can’t be any worse than me."
 
-
+    show angel idle
     s "I’m not from here, like from Earth. "
     show daisy surprised
     "Huh?"
 
     d "..An Alien..?"
-
+#sprite here
     "Samyaza weakly laughs."
 
     s "You’re so cute.. No, like...{w=1.0} well, why don’t I show you."
@@ -999,16 +1058,18 @@ label start:
     "Humiliating myself with tears, and repeating myself so much that my mouth shrivels up."
     "The only thing I can do is withstand the pain of her searing skin as I pat her wounds."
     hide black with dissolve
+    show angel sad
     s "I’m scared to tell you the truth..{w=1} But just now, I really want to go back home. It seems like I’m not reacting well to this new body.."
 
     show daisy surprised
     "I tilt my head."
-
+    show angel sad
     s "Sorry. I don’t mean to worry you."
 
     d "No..{w=.5} I’m just..{w=.5} Confused."
 
     #SAMYAZA (frown sprite)
+    show angel frown
     s "Don’t worry about it…"
 
     "I gather up all my strength, I spit out the words, stuck like phlegm, in my throat."
@@ -1016,6 +1077,7 @@ label start:
     show daisy anxious
     "No, Samyaza.. I want to help you, please tell me what it is."
     #sprite time
+    #show angel frown
     "Her face twists into a mix of satisfaction, and concern."
 
     s "Can I tell you a story?"
@@ -1024,7 +1086,7 @@ label start:
     hide white
     show black screen behind daisy, angel with dissolve:
         alpha 1
-
+    
     s "Lets say, heaven is real. Would that drive you mad?"
 
     show daisy happy
@@ -1033,12 +1095,12 @@ label start:
     s "Well..?"
     show daisy anxious
     d "I don’t know… I never had the best relationship with that stuff. I guess it depends?"
-
+    show angel sad
     s "Would you want to die?"
-
+    
     show daisy surprised
     "I raise my eyebrows at her."
-
+    show angel confused
     d "What??"
 
     show daisy nervous
@@ -1046,7 +1108,7 @@ label start:
 
     d "…Sorry…"
     show daisy surprised
-    show angel at flip
+    show angel frown at flip
     "Samyaza grabs my burnt wrist. It hurts less now after she bandaged it."
 
     s "Don't apologize."
@@ -1056,7 +1118,7 @@ label start:
     d "I don’t know…{w=1.0} I mean, I guess I’ve thought about dying before…"
     show daisy anxious
     "I grit my teeth through the lie, hoping beyond hope that she wouldn’t dig further."
-
+    show angel sad
     s "Daisy…"
     show daisy idle smile
     d "No! Don’t worry! That’s all in the past…{w=1.0} things have been fun lately."
@@ -1069,11 +1131,12 @@ label start:
     "I should be scared, shouldn’t I?"
     "I’m stepping too close to a flame that I know nothing about."
     pause 1.0
-    show daisy sappy
+    show daisy blush
     hide ba with dissolve
     "But I can’t resist its warmth."
 
     show daisy at unflip
+    show angel frown
     s "I will always, always be here for you. You are my first real human friend. You don’t know how much you mean to me."
 
     show daisy idle
@@ -1083,7 +1146,7 @@ label start:
 
 
     s "Oh.{p=1}Right."
-
+    show angel sad
     s "Well, let’s say there {i}is{/i} a heaven. And amongst its denizens, guardian angels exist. Their sole purpose is to protect humans with their brethren."
 
     s "Now…{w=0.5} let’s say that one particular guardian angel failed. Her love for humans is far too strong for her to handle."
@@ -1098,30 +1161,33 @@ label start:
 
     s "After a while..{w=2} {nw}"
     #sprite
+    show angel frown
     extend "After a while of living aimlessly, with her days blending in together, she remembers something she heard a long time ago; about a human who tried to reach the angel’s level…{w=1.0} Maybe, this could help her return home.."
 
     show daisy anxious
     d "So...{w=1} you’ll leave?"
 
     #SAMYAZA (sighs)
+    show angel sad
     s "I’m unsure, I’ll have to see. "
     show daisy nervous
     d "I don’t know if I like this story."
 
     show daisy crying at flip, scene_right_far with moveinright
     "I tear up, facing away."
-
+    show angel confused
     s "You don’t want to help me?"
-
+    show angel pain
     d "{b}{shader=jitter:u__jitter=1.0, 3.0}No, that’s not what I meant!{/b}{/shader}{nw}"
     d "{b}No, that’s not what I meant!{/b}{nw}{fast}"
+    show angel sad
     s "I need a human to help me with this ritual. The only person I want to help me is you."
 
     show angel at scene_center_offright with moveinright
     "She scoots closer to me, but I feel like I'm sinking.{p=1.0}Some stupid girl like me would probably just mess it up. "
 
     s "You’re the most beautiful human I’ve met. You have the brains to do this."
-    show daisy sappy
+    show daisy blush
     "I blush. She’s probably just trying to fool me. I won’t fail for these tricks. Something as ethereal as her could never love me."
 
     d "...{w=1}I’ll help."
