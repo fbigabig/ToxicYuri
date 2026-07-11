@@ -51,9 +51,7 @@ image daisy surprised:
     zoom 0.4
     yoffset 100
 image anya idle:
-    "images/mob.png"
-    zoom 0.4
-    yoffset 100
+    "images/mob_dress.png"
 image angel idle:
     "images/angel idle.png"
     zoom 0.4
@@ -62,7 +60,7 @@ image angel shadowed:
     "images/angel shadowed.png"
     zoom 0.4
     yoffset 100
-image black_alpha:
+image black alpha:
     "images/black screen.png"
     alpha 0.5
 layeredimage yuri_living_room_night:
@@ -112,9 +110,9 @@ label start:
 
     "It was kind of hard having to do everything myself, but I liked having the place to myself. I’d be kind of embarrassed having a new person see me get all sweaty and out of breath."
     show daisy nervous
-    show black_alpha behind daisy
+    show black alpha behind daisy
     "The image of myself out of breath and sweaty popped up into my head. My bangs were pinned back, revealing my ugly forehead, my hairline frames my face terribly. My glasses kept sliding down like I was an old man."
-    hide black_alpha
+    hide black
     show daisy idle
     "I returned back to earth, only now noticing the grimace on my face. Quickly, I have to relax. Anya will notice and pester me."
     show daisy anxious
@@ -187,15 +185,15 @@ label start:
     "Huh..? I don’t remember leaving the lights on when I left."
 
     "...Whatever. I'm just tired. I'm going to turn the light off."
-    show black_alpha
+    show black alpha
     
     "The AC was blasting."
-    show daisy idle behind black_alpha at scene_right, flip with dissolve
+    show daisy idle behind black at scene_right, flip with dissolve
     " I put my bag down on the dining room chair. " #add extend here if u can figure out transitions
 
     "I made my way to enjoy the living room. Finally, I can relax on a couch without being on edge."
     #add sfx here 
-    show angel shadowed behind black_alpha at scene_center, flip with vpunch 
+    show angel shadowed behind black at scene_center, flip with vpunch 
     "A shadow in the corner of my eye leans towards me."
     show daisy nervous at unflip
     "A small yelp escapes from my mouth. Every single hair on my body that I forgot to pluck out just raised up. Fearfully, I {cps=*.25}slowly look up at the figure. My heart beats out of my chest.{/cps}"
@@ -288,7 +286,7 @@ label start:
 
     scene black screen with fade 
 
-    scene yuri_living_room_night with fade 
+    scene yuri_living_room_night with Dissolve(2.0) 
 
     show daisy idle at scene_left, flip
     show angel idle at scene_right
@@ -431,13 +429,16 @@ label start:
     "What the fuck am I doing?{fast}"
     "Something in me, a divine presence, picks me up, and I walk over to pick the handkerchief up."
     "I lay it down next to me again. And drift to sleep."
-    scene yuri_living_room with fade
-    show angel idle at scene_right with fade
+
+    window auto
+
+    scene yuri_living_room with  Dissolve(4.0)
+    show angel idle at scene_right with dissolve
 
     "Samyaza is up bright and early. She eats a strange resinous bread, and gives me a relaxed grin. I rub my eyes while I grab a cup of yogurt."
 
     s "Good morning, I was worried that you were going to miss class."
-    show daisy idle at scene_left with fade
+    show daisy idle at scene_left with dissolve
     d "Thanks.. But you really didn’t have to wait for me."
 
     s "It’s no biggie."
@@ -489,7 +490,7 @@ label start:
 
     s "It was SUPER boring."
     show daisy anxious
-    d "You really didn’t ha-{nw}"
+    d "You really didn’t ha-{w=1}{nw}"
 
     s "{b}I want to.{/b}"
 
@@ -497,6 +498,634 @@ label start:
 
 
     s "That’s what roomies are for..{w=0.5} Right?"
+
+    "She nonchalantly grins."
+    show daisy at unflip, scene_left_far
+    show angel idle at scene_center_offleft
+    camera:
+        perspective True
+        zpos -700
+        xpos -450
+        ypos -250
+    
+    "As she wraps her arms around me, into a hug, my face moves on its own, contorting into a matching smile as my hands lay flat by my side."
+
+
+
+#MONTAGE
+    scene black screen with Dissolve(0.5)
+    camera:
+        perspective False
+        zpos 0
+        xpos 0
+        ypos 0
+
+    scene yuri_classroom_01 
+    show daisy anxious at unflip, scene_front_center_offright:
+        ypos 1500
+    show angel idle at scene_front_center_offleft, flip:
+        ypos 1500
+    camera:
+        perspective True
+        zpos -200
+        xpos 0
+        ypos 000
+    show black screen
+    hide black screen with Dissolve(0.5)
+    "Samyaza slyly hands me over notes from the upcoming lecture. She must be a good student if she’s already this far ahead. Way better than me."
+
+    "Sheepishly, I grab the notes and begin to copy them down."
+    show daisy surprised
+    "I notice a cute little drawing on the corner. Poorly drawn versions of me and her diligently studying."
+    show daisy happy
+    "I rip it out to add to my scrapbook."
+
+
+    scene yuri_park_01 
+    show daisy idle at scene_right_far
+    show anya idle at scene_center, flip
+    camera:
+        perspective False
+        zpos 0
+        xpos 0
+        ypos 0
+    show mob_dress at scene_center_offleft
+    show mob_walk at scene_left_far
+    show black screen
+    hide black screen with Dissolve(0.5)
+
+    "I try to hang out with Anya and her friends. They howl with laughter at Anya’s joke."
+
+    "I lounge a bit further away from them,"
+    show anya idle at scene_center_offright,unflip with {'master': moveinright}
+
+    extend "Anya sympathetically looks my way and scoots closer to me."
+
+    "She tries to include me in the conversation,{nw}"
+    show daisy idle smile
+    extend "but all I can do is weakly laugh."
+    show daisy anxious 
+    "I tense a bit, staring at the leaves of the same tree I did all those weeks ago when I first transferred."
+
+    "In the middle of her conversation, I hear Anya spontaneously jump up, and grab something from that tree."
+
+    "She hands me a little flower. I gingerly reach out to it."
+    
+    show daisy surprised
+    d "Is this for.. My scrapbook?"
+
+        #ANYA (smile sprite)
+    a "Duhh!"
+
+    d "You remembered?"
+    show daisy happy
+    "Anya noogies me."
+
+    a "Who do you think I am?"
+
+    
+
+    scene black screen with fade
+    camera:
+        perspective True
+        zpos -500
+        xpos 350
+        ypos -200
+    scene yuri_living_room with dissolve
+    #INT- APARTMENT LIVING ROOM -  DAY
+
+    show daisy idle at flip, scene_right_far
+    "I scroll through my phone as I eat my yogurt bowl, {nw}"
+    show angel idle at scene_center_offright, flip with {'master': dissolve}
+    extend "Samyaza appears from behind, snatches my phone and holds it above me as {nw}"
+    show daisy happy at unflip
+    extend "I giggle at her to give it back. She gives in and pats my head."
+    scene black screen with Dissolve(0.5)
+    camera:
+        perspective True
+
+        zpos 0
+        xpos 0
+        ypos 0
+    
+    scene yuri_park_01
+    show daisy anxious at unflip, scene_right_far
+    show angel idle at flip,scene_center_offright
+    show black screen
+    hide black screen with Dissolve(0.1)
+    pause 1.0
+
+    camera:
+        perspective True
+
+        zpos 0
+        xpos 0
+        ypos 0
+        linear 2.0 zpos -600 xpos 450 ypos -250
+
+    pause 2.0
+    "Samyaza and I sit down and eat sandwiches she made."
+    show black alpha behind daisy
+    show angel behind black
+    extend " I feel like a sore thumb."
+    "Could I really live a normal college life? I stare at the sandwich. I shouldn't eat this, I don’t belong here."
+
+    "Samyaza brings the sandwich to my mouth, but it just falls against my cheek."
+
+    "I’m such an alien, and aliens don’t eat human food. "
+    show daisy nervous
+    "The physical weight of my body takes up the space, suffocating everyone else enjoying their day outside."
+    hide black
+    "Samyaza opens my mouth{nw} "
+    show daisy surprised
+    extend "like she’s opening a trash chute and puts the sandwich in it."
+    
+    
+    show daisy happy at unflip, scene_right_far
+    "I start to cackle."
+
+    scene room daisy night with fade
+    camera:
+        perspective False
+        zpos 0
+        xpos 0
+        ypos 0
+    show angel idle at scene_right
+    "Samyaza helps string up some fairy lights, she’s tall enough to do so. I sit on my bed and watch her. The fabric of her vest stretches across her back, it traces the lines of her muscles with every movement. "
+
+    show daisy anxious at scene_left with dissolve
+    d "I’m really sorry for being unable to help…"
+
+    s "No worries, sit your pretty little self down. Ladies shouldn’t do this work."
+    show daisy sappy
+    "I bite my nails and enjoy the view."
+
+    scene yuri_living_room_night with Fade(1.0,1.0,1.0)
+    show daisy anxious at scene_left_far
+    "I’m typing away at my computer with urgency. The first big project of the semester is coming up. My brain feels like it's filled with fog as the document just can’t seem to fill up."
+    "In 30 minutes, I have to meet up with my group members for this class. I want to make sure the presentation is done by then. I’m hoping I can just make the presentation, and write the content."
+    "...I’d rather {i}die{/i} than present and be under the microscope of the entire class."
+
+    "I can’t afford to do poorly, my groupmates already think I'm irritating. They’re always asking if I have any questions after our meetings."
+    "I can’t ever look them in the eye when I do have questions, though. I feel the awkward glances they give each other as I try to talk."
+    show black screen behind daisy with dissolve:
+        alpha 0.8
+    "If I do poorly, I’ll disappoint Anya. I already hear the scolding I’d receive if I failed."
+    "After that, it'll only be a matter of time until she realizes that everyone was right, and that she ought to cut me off instead of using me like some charity case."
+    "She’ll be sick of me even more than before."
+    #sfx
+    
+    "My stomach rumbles, but I continue to furiously type. I’m never able to get work done, so I ignore it. I catch a whiff of myself too… I guess the shower will wait."
+    show angel idle at scene_right behind black with dissolve
+    "Samyaza comes into the apartment, her last class today ends rather late."
+
+    s "Daisy, how was your day?"
+
+    "I don’t deserve to talk to her until I finish. I focus in on my laptop screen."
+
+    s "Daisy?"
+
+    d "Sorry, I’m busy."
+
+    s "You wanna chat about your day while you work on your thing?"
+
+    d "No."
+
+    #SAMYAZA (frown sprite)
+    s "Aw, you sure?"
+
+    "I stop typing."
+    show daisy at flip, scene_left_far
+    show angel idle at scene_center_offleft with moveinleft
+    camera:
+        perspective True
+        linear 1.0 zpos -600 xpos -450  ypos -250
+    "Samyaza sits down in front of me."
+
+     
+    s "Come on, tell me about your day."
+    hide black with dissolve
+
+    "She softly grins, leans forward and holds her face in anticipation."
+
+    "I take my hands off of the keyboard, and rub my fingers together. I am completely blank, how {i}was{/i} my day?"
+    show black alpha behind daisy
+    show angel behind black
+    "It's like I'm watching someone else go through my days. What’s the right way to answer her, I want to give her an answer that will make her happy.."
+    hide black
+    s "Sooo? "
+
+    d "Uh.. sorry! Uhm, it was okay… I guess."
+
+    "Her lips flatline, as she tilts her head. She gets a little closer to me."
+
+    s "{cps=*.25}Andd…?{/cps}"
+
+    d "I…{p=1} I really need to get back to work."
+
+    "Samyaza slowly closes my laptop until it’s halfway open."
+    show daisy surprised
+    d "Hey!"
+
+    s "I’ll open it up again… once you tell me about your day!"
+
+    d "I mean, I studied then I scrapbooked."
+
+    s "…Scrapbooked? Do tell."
+    show daisy anxious
+    "I sink into my feet, and rub my hands with more intensity, I want  to feel any sort of friction. In the back of my mind, the project feels like an unbearable itch that I can’t scratch."
+
+    d "{cps=*2}The other day I was hanging out with my friend- Anya, and she knows I like scrapbooking… so uhm she drew a little cat on a receipt. We went to a coffee shop.{/cps}"
+
+    s "And? How was the coffee?"
+
+    d "It was okay. Nothing to write home about."
+
+    s "What did you get?"
+    
+    d "Just an iced vanilla latte. I  really wanted to try this place cause I know they have specialty beans."
+    d "Back at home we don’t have anything cool like this. Honestly, there’s nothing cool at home. The interior was really cute too, and also the…"
+
+    s "The?"
+
+    show daisy idle
+    d "Samyaza. I really need to do this assignment. It's due {b}soon.{/b}"
+
+    s "Make sure to talk to me after, okay? It’s so lonely here."
+
+    "I hesitate to open up my laptop."
+
+    d "Yeah..{w=0.5} it really can be."
+
+    "I open up my laptop. I don’t know how but thirty minutes have passed."
+    "I checked my phone, for some reason the ringer didn’t go off at all."
+    "My classmates spammed me with multiple inquisitive texts. "
+    show daisy surprised
+    d "Holy shit."
+
+    s "What?"
+    show daisy nervous
+    d "Oh man, I totally fucked up."
+
+    show angel at scene_center_offleft
+    "Samyaza leans further in."
+    "Just go away!"
+    "I press into my skin, holding myself back from swatting her away."
+
+    "Samyaza gets up, her face close to mine."
+
+    s "What happened?? Tell me??"
+    show daisy crying
+    "I scream and pull my hair. I so desperately want to curse her out but I only pathetically groan. I knew it. I knew it, I knew it, I knew it. This is what she was trying to do all along."
+
+    "Samyaza gets up in my face, her hand brushes against mine and I push her away."
+
+    #DAISY (angry)
+    "Ugh… it’s because of you! They {b}hate{/b} me because of you!"
+
+    #SAMYAZA (panicked)
+    "Huh- What do you mean?! I don’t understand! I can’t help you if I don’t know what’s going on!!"
+
+    show daisy at offscreenleft with moveinright
+    "I turn my laptop off and run into my room. I shut the door behind me. "
+    hide daisy
+    scene black screen with Dissolve(0.5)
+    camera:
+        perspective False
+        zpos 0
+        xpos 0
+        ypos 0
+    scene room daisy night with Dissolve(0.5)
+    #[BANG SFX 3X]
+
+    "The slamming is deafening. I curl up into bed and cover my ears with the pillow."
+
+    s "Daisy! Open up, please!"
+
+    "{b}Go away!{/b} My entire face hurts with the intensity of how hard I’m squeezing my eyes shut."
+
+    d "You’re only making it worse!!!"
+
+    "Samyaza’s voice quivers more and more. The knocking increases in intensity. "
+
+    #[DOOR KNOB OPEN BUT ITS LOCKED SFX]
+
+    "My pillow is becoming damp with my tears."
+
+    "Why am I lashing out? She’s not going to like me if I keep this up."
+
+    "I guess I'm saving myself. At least I’ll know {i}exactly{/i} why she hates me. I’m ripping the bandaid clean off."
+
+    scene black screen with dissolve 
+    #INT - APARTMENT - NIGHT
+
+#[BLACK SCREEN + SOMBER MUSIC]
+
+    "My hand is stuck on the apartment doorknob. Something deep inside my soul is working against me. Do I {i}have{/i} to open the door? I don’t know if I can face Samyaza. "
+
+    "I really am the worst of the worst. Ignoring Samyaza for the past day? I don’t think I deserved to talk to her after yesterday."
+
+    "But, as horrible as it sounds, I like that I can finally say she really cares about me. She was miserable the entire day today. Cartoonishly so- like she learned how to look sad through sitting down and watching Saturday morning cartoons."
+    "She looked like an abandoned puppy."
+
+    "Standing still like a statue, not knowing whether to open the door and accept the punishment I deserve, or run away and prolong it. Samyaza deserves better than me."
+
+    "Regardless, I opened the door, not because I was brave- but because I was a coward who wanted the comfort of my own bed after a terribly long day."
+
+#[MUSIC STOPS]
+#[DOOR OPENING SFX]
+    #INT. APARTMENT LIVING ROOM - WHITE SCREEN
+    scene yuri_living_room
+    show white screen:
+        alpha 0.8
+    show black screen
+    hide black screen with dissolve
+    "A searingly bright white light is spilling from the bathroom door, the rest of the apartment is barely legible as the blinding light swallows it up."
+    "My eyes {b}burn.{/b}"
+    "It takes me seconds to process the gurgling that echoes through the house."
+
+    show daisy surprised behind white at scene_right with dissolve
+    d "Samyaza??!"
+
+    "No response. I drop my bag and run to the bathroom, preemptively covering my eyes."
+    scene yuri_bathroom_01
+    show red screen:
+        alpha 0.8
+    show white screen
+    hide white screen with dissolve
+    #[SKIN-ISH RED LIKE WHEN YOU CLOSE YOUR EYES WHEN ITS REALLY BRIGHT OUT]
+
+    s "Glglg..daisylglgl"
+
+
+    d "Samyaza, what’s going on????"
+
+
+    d "My heart is beating so fast and my eyelids trembling in fear."
+    scene white screen
+    show red screen:
+        alpha 0.8
+    "My body glues them shut. And even if I want to, I’m too afraid to open my eyes."
+    "It’s sweltering here and it's hard to breathe."
+    "My entire body clenches up."
+
+    "Samyaza grabs my wrist, her gurgling continues. She guides me to some sort of tubed object."
+    "Her hand sears my skin."
+    "Her fingers, like a branding iron."
+    "I bite my lip to hold in my whimpers of pain."
+    "The pain helps ground me-{p=1.0} it helps me realize that whatever is happening is real. "
+
+    "She opens the cap to the object, and guides my hand to draw a circle."
+
+
+    d "Mmph…!"
+
+    "My nails are digging into my hand, as my other hand is drawing a series of shapes I can’t figure out."
+
+    #[MUSIC STOPS]
+    #[FADE TO BLACK]
+    scene black screen with dissolve
+    "The light instantly goes out, Samyaza coughs and wheezes, like something big is coming out of her.."
+
+    scene yuri_bathroom_01
+    show daisy anxious at scene_left
+    show angel idle at scene_right
+    "I tentatively open my eyes- her eyes are red, with a less vibrant light seeping out of her orifices. Her veins are pulsating and golden."
+
+    camera:
+        perspective True
+        linear 1.0 zpos -500 xpos 300  ypos -175
+    show daisy nervous at scene_center with moveinleft
+    "I gently kneel down by her side, rubbing her back with my other hand. The other one stings too much, I left it limp beside me. My hand blisters as if it is stuck into a nuclear reactor."
+
+    "Timidly, my head makes its way to the mirror.. Some sort of… sigil like drawing. A large circle with strange lettering was drawn with lipstick."
+
+    "Samyaza weakly clenches onto my hand, she gently pets my burn mark. Still feeling the residual heat, I bite my lip to hold in the pain."
+
+    s "…We should do something about this…"
+
+    show daisy nervous
+    "I sigh, exhaustion catches up to me.{nw} "
+    show daisy sappy
+    extend "Maybe that sigil has some sort of effect on me too, because I sheepishly lay  my head on her shoulder."
+
+    "I’m so selfish, but I don’t care.{w=1} She lights a fire within me.{w=.5} I want the heat to melt us into each other at this moment."
+
+#INT. APARTMENT LIVING ROOM - NIGHT
+    scene black screen
+
+    camera:
+        perspective True
+        zpos -600 xpos -450  ypos -250
+    scene yuri_living_room_night 
+    show daisy anxious at flip, scene_left_far
+    show angel idle at scene_center_offleft, flip
+    show black screen
+    hide black screen with fade
+    "Samyaza sits, she’s hunched over, still catching her breath. Her exhaustion is palpable"
+
+    "I walk over, handing her a warm cup of tea. I’m so useless, I can never really help people. I want to do more for her, but I’m still frazzled from whatever the hell just happened. I dig my nails into my legs."
+
+
+    s "Hey, Daisy..{w=1} Don’t worry about it."
+
+    d "…."
+
+    s "Really, it’s not your fault"
+
+    #DAISY (sad gay puppy eye etc sprite)
+    show daisy anxious
+    "Well… maybe If I didn’t ignore you all day… this wouldn’t have happened.."
+
+    s "No, it’s not that…{w=1} It's fine. "
+
+    "I can’t bear to look at her."
+    camera:
+        perspective True
+        linear 2.0 zpos 0 xpos 0  ypos 0
+    show daisy at scene_right,unflip with MoveTransition(2.0, leave=offscreenleft, leave_time_warp=_warper.easeout) #tbd define this
+    "I uncomfortably scooch away. I still feel the heat emitting from her, but I’m far enough to be edged by it."
+    show angel at flip
+    s "I should tell you about something."
+    show daisy nervous at unflip
+    "My head is hung down. I peep in her direction."
+
+    s "I’m not… really what I say I am. {nw}"
+    #[happy/genuine sprite]
+    extend "Hah. that must be obvious by now."
+
+
+    "My expression is unchanged. Trust me Samyaza,{i} whatever it is {/i}, it can’t be any worse than me."
+
+
+    s "I’m not from here, like from Earth. "
+    show daisy surprised
+    "Huh?"
+
+    d "..An Alien..?"
+
+    "Samyaza weakly laughs."
+
+    s "You’re so cute.. No, like...{w=1.0} well, why don’t I show you."
+    show angel at unflip
+
+    "After that, she takes off her vest. Two painful bumps, almost like large hard cysts infested themselves on her back. Her sweat glistens under the light of the cheap ikea lamp."
+
+    s "Feel them."
+    show daisy at scene_center with moveinleft
+    show white screen with dissolve:
+        alpha 0.25
+    show daisy sappy
+    "I slowly bring my hand over, it’s softer than I expected. But extremely hot, a bright light peeks through one orifice."
+    "My hand stings, but I won’t dare pull away, the thought of it weighs down my heart."
+
+    show daisy surprised
+    d "This looks really painful…"
+
+    s "It’s not that bad. What must be really painful is your wrist. I’m sorry about that."
+    d "No, it’s okay…{w=1} as long as you’re alright."
+
+    show daisy nervous
+    show angel behind daisy
+
+    show black behind daisy with dissolve:
+        alpha 0.8
+    "I caress the cysts, hoping it’d soothe her pain. After how much misery I’ve caused her, it’s the least I could do."
+
+    "What even is she? What’s even fucking happening? I don’t want to bother her anymore than I already had either, so I suck it up."
+    show black behind daisy with dissolve:
+        alpha 0.95
+    "My body feels compelled to get on the ground, and beg for her forgiveness."
+    "Humiliating myself with tears, and repeating myself so much that my mouth shrivels up."
+    "The only thing I can do is withstand the pain of her searing skin as I pat her wounds."
+    hide black with dissolve
+    s "I’m scared to tell you the truth..{w=1} But just now, I really want to go back home. It seems like I’m not reacting well to this new body.."
+
+    show daisy surprised
+    "I tilt my head."
+
+    s "Sorry. I don’t mean to worry you."
+
+    d "No..{w=.5} I’m just..{w=.5} Confused."
+
+    #SAMYAZA (frown sprite)
+    s "Don’t worry about it…"
+
+    "I gather up all my strength, I spit out the words, stuck like phlegm, in my throat."
+
+    show daisy anxious
+    "No, Samyaza.. I want to help you, please tell me what it is."
+    #sprite time
+    "Her face twists into a mix of satisfaction, and concern."
+
+    s "Can I tell you a story?"
+
+    "I bob my head."
+    hide white
+    show black screen behind daisy, angel with dissolve:
+        alpha 1
+
+    s "Lets say, heaven is real. Would that drive you mad?"
+
+    show daisy happy
+    "That’s a question..!"
+    show daisy idle
+    s "Well..?"
+    show daisy anxious
+    d "I don’t know… I never had the best relationship with that stuff. I guess it depends?"
+
+    s "Would you want to die?"
+
+    show daisy surprised
+    "I raise my eyebrows at her."
+
+    d "What??"
+
+    show daisy nervous
+    "She’s so intense and sweltering. I shrink into myself."
+
+    d "…Sorry…"
+    show daisy surprised
+    show angel at flip
+    "Samyaza grabs my burnt wrist. It hurts less now after she bandaged it."
+
+    s "Don't apologize."
+
+    "She doesn’t blink." 
+
+    d "I don’t know…{w=1.0} I mean, I guess I’ve thought about dying before…"
+    show daisy anxious
+    "I grit my teeth through the lie, hoping beyond hope that she wouldn’t dig further."
+
+    s "Daisy…"
+    show daisy idle smile
+    d "No! Don’t worry! That’s all in the past…{w=1.0} things have been fun lately."
+
+    show black alpha as ba behind daisy with dissolve
+    show angel behind ba
+    show daisy anxious at flip
+    "I look away, hoping she doesn’t read me for what I am."
+    "I mean, who knows what she can do."
+    "I should be scared, shouldn’t I?"
+    "I’m stepping too close to a flame that I know nothing about."
+    pause 1.0
+    show daisy sappy
+    hide ba with dissolve
+    "But I can’t resist its warmth."
+
+    show daisy at unflip
+    s "I will always, always be here for you. You are my first real human friend. You don’t know how much you mean to me."
+
+    show daisy idle
+    "Her grip is tight. I hold in my confusion at her passion."
+
+    d "Do you want to go back to the story?"
+
+
+    s "Oh.{p=1}Right."
+
+    s "Well, let’s say there {i}is{/i} a heaven. And amongst its denizens, guardian angels exist. Their sole purpose is to protect humans with their brethren."
+
+    s "Now…{w=0.5} let’s say that one particular guardian angel failed. Her love for humans is far too strong for her to handle."
+
+    s "The angels send her away. She now lives her days with a maddening silence. An emptiness that’s impossible to fill."
+
+    hide black with dissolve
+    #(FADE BACK TO INT - LIVING ROOM)
+
+    show daisy idle
+    d "What will the angel do now?"
+
+    s "After a while..{w=2} {nw}"
+    #sprite
+    extend "After a while of living aimlessly, with her days blending in together, she remembers something she heard a long time ago; about a human who tried to reach the angel’s level…{w=1.0} Maybe, this could help her return home.."
+
+    show daisy anxious
+    d "So...{w=1} you’ll leave?"
+
+    #SAMYAZA (sighs)
+    s "I’m unsure, I’ll have to see. "
+    show daisy nervous
+    d "I don’t know if I like this story."
+
+    show daisy crying at flip, scene_right_far with moveinright
+    "I tear up, facing away."
+
+    s "You don’t want to help me?"
+
+    d "{b}{shader=jitter:u__jitter=1.0, 3.0}No, that’s not what I meant!{/b}{/shader}{nw}"
+    d "{b}No, that’s not what I meant!{/b}{nw}{fast}"
+    s "I need a human to help me with this ritual. The only person I want to help me is you."
+
+    show angel at scene_center_offright with moveinright
+    "She scoots closer to me, but I feel like I'm sinking.{p=1.0}Some stupid girl like me would probably just mess it up. "
+
+    s "You’re the most beautiful human I’ve met. You have the brains to do this."
+    show daisy sappy
+    "I blush. She’s probably just trying to fool me. I won’t fail for these tricks. Something as ethereal as her could never love me."
+
+    d "...{w=1}I’ll help."
+
 
     return
 '''
