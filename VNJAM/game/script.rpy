@@ -1649,6 +1649,7 @@ label start:
 
     "What is {b}wrong{/b} with her?"
     "I could just see her mouth flapping... {w=3}{nw}"
+    #camera zoom in later
     show anya behind daisy
     show red screen behind daisy with dissolve:
         alpha 0.1
@@ -1708,6 +1709,112 @@ label start:
     a "Dais- {w=.5}{nw}"
     
     "I ran off before she could say my name." 
+    pause 2.0
+#INT. BATHROOM - NIGHT
+    scene anya_bathroom with fade
+    "All I could do was stare at the mirror. "
+    show daisy upset at scene_center with dissolve
+    "I repeat the words I’d say to the rest of the group just so I can understand their horror as they saw my mouth move."
+    show daisy with moveintop:
+        ypos 1400
+    "Dejected, I sit on the bathroom floor."
+    show daisy blush
+    "I miss Samyaza. "
+    show daisy angry
+    "{cps=*3}I slap myself, I don't want to linger on her, no, I want Samyaza to come, I don’t believe in God but maybe I do now.{/cps}"
+    show daisy anxious
+    "I prayed, God {b}please please please{/b} send Samyaza to come get me."
+    show daisy upset
+    "{cps=*3}I miss her so much I want to bite my lip so hard that blood bursts out and this entire bathroom becomes stained, but it’s okay because she’ll come-{w=4.0}{nw}{/cps}"
+    show daisy blush
+    "{cps=*3}-and she'll hold me and she’ll heal me. No one here matters except for her. I really, really, really, really, {b}really{/b} miss her.{/cps}"
+    hide daisy with dissolve
+    "I curl up into a ball, and begin to hug my legs tightly, anything to get even a fraction of comfort."
+    "{cps=*3}I miss her, I miss her, {b}I miss her.{/b}{/cps}"
+    "{cps=*3}I feel like such a kid as the tears stream down my face, maybe even snot too, {nw}{/cps}"
+    show red screen with {'master':dissolve}:
+        alpha 0.25
+    extend "{cps=*3}I bite even harder on my lip. I’ll make myself uglier- {/cps}{cps=*.25}{b}I’ll be a pile of tears, mucus, and blood.{/b}{/cps}"
+    "{cps=*3} I’ll put Samyaza up to the test. Maybe she’s the one if she can clean me up.{/cps}"
+
+#(KNOCK SFX. KNOCK SFX)
+    "I hear a knock at the door" #cut ater
+    "{b}Not now, not now.{/b}"
+
+#ANYA (through the door)
+    a "{size=*.75}Hey.. Daisy?{/size}"
+    "Why don’t I have the the strength within me to yell {shader=zoom}{b}“FUCK OFF!”{/b}{/shader} at her." #took out what
+
+    show daisy crying at scene_center with dissolve
+        
+    
+    d "{cps=*.5}…what..?{/cps}"
+
+    a "{size=*.75}Are you...{w=1.0} okay?{/size}"
+    show daisy angry
+    "{shader=jitter:u__jitter=1.0, 3.0}{b}Is she fucking serious?{/b}{/shader}{nw}"
+    "{b}Is she fucking serious?{/b}{fast}"
+    
+    a "{size=*.75}It’s okay if you don’t want to talk about it now…{w=1} but I’m here for you..{/size}"
+    show daisy upset
+    "It takes me a minute to register what she wants from me. {p=1}{nw}"
+    show daisy angry
+    extend "I scoff into my legs, and crane my head up against the wood of the door to reply, but …"
+
+    a "{size=*.75}Hey… um…{/size}"
+    show daisy angry
+    "Oh god, what else now?"
+
+    a "{size=*.75}...{p=1}Your roommate is here.{/size}"
+    show daisy surprised
+    "...{w=.75}{b}What?{/b}"
+
+
+    
+    a "She said that she’s looking for you? But I can tell her you’re busy if you need some t-{w=3}{nw}"
+
+    #(QUICK CUT TO INT. ANYA HOUSE - NIGHT. DAISY SPRITE IS SERIOUS) [SLAM SFX]
+    scene black screen with Dissolve(.1)
+
+    scene anya_house
+    show anya idle at scene_left
+    show black screen
+    hide black screen with Dissolve(.1)
+#add crowd?
+    show daisy upset at scene_right_far with moveinright
+    
+    d "{b}Where is she?{/b}"
+#sprite
+    a "Oh, she’s over b-{w=2.0}{nw}"
+    show angel sad at scene_center, flip with dissolve
+    s "Daisy!"
+
+    "Every stupid little thing that is eroding my brain flies out as I {nw}"
+    show daisy crying at scene_center_offright, with {"master": moveinleft}
+    extend "run into her arms."
+    "My snot and tears stain her shirt."
+    show daisy sappy
+    "I look up at her, it’s like I came home."
+    show angel idle
+    #sprite
+    "She wipes my tears, and wipes my mucus with her vest."
+    "It looks like something out of a soap opera, but I don’t {b}care{/b}."
+    show daisy angry
+    "I don’t care about what any of these people think."
+    show daisy sappy
+    "I can die happy."
+
+    
+    a "…Okay, I’ll just leave you two alone then. {p=2}Daisy, text me when you get home, okay?"
+
+    show daisy upset
+    "Whatever."
+    "Yeah yeah."
+    "Who cares."
+    "Keep showing others just how caring you are."
+    show daisy angry
+    "I know the real you."
+
 
     "..."
     "..."
