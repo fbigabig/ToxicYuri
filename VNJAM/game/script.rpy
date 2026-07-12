@@ -11,6 +11,7 @@ define narrator = Character(color="3AA2DF", what_italic=True)
 define s = Character("Samyaza", color="DB9B66")
 
 define unknown = Character("???", color="DB9B66")
+define au = Character("???", color="FF0000")
 
 define a = Character("Anya", color="FF0000")
 
@@ -2675,7 +2676,7 @@ label start:
     show angel sad
 
     "She notices my expression, or I guess lack thereof."
-    
+
     s "{cps=*3}Oh no! Did I mess up? I’m so sorry, Daisy-{/cps}{w=1}{nw}"
     show daisy happy
     d "No, no, it’s okay, you didn’t do anything wrong. Thank you. Really, this is the most anyone has eve-{w=1}{nw}"
@@ -2711,7 +2712,7 @@ label start:
     show daisy idle smile
     d "...Yeah. Me too. "
 
-    
+
     s "Like, really, really missed you."
 
     show daisy anxious
@@ -2733,7 +2734,7 @@ label start:
         linear 2 xpos 150 ypos 100 zpos -700
     "Samyaza’s hand rests on mine, and she leans her head in."
     show angel desire
-    
+
     s "Please.{p=1}Let me make you happy…{p=1}I don’t know what I’d do without you.{p=1}I don’t know what I’d fill my days with."
 
     d "…"
@@ -2756,6 +2757,502 @@ label start:
     "I snuggle up to her, and drift away."
 
     #[♫MUSIC FADE OUT♫]
+    #INT. UNIVERSITY PARK - DAY
+    scene black screen
+    camera:
+        xpos 0 ypos 0 zpos 0
+    scene yuri_park_01 with Fade(0,2,1)
+    #[BUG SFX]
+    #[OUTDOORS SFX]
+    show daisy anxious  at scene_right,flip with dissolve
+    "The sun is way too hot, which makes my headache throb even more."
+    "This past weekend has felt like a dream."
+    "I keep replaying the party, the ritual…{p=1}{b}Samyaza.{/b}"
+    show daisy nervous
+    "Instinctively, I cover my face. I don’t want anyone seeing my blushed cheeks and getting the wrong idea."
+
+    au "Daisy."
+    #[♫REASONING♫]
+    play music "wav_reasoning.ogg"
+    show daisy at unflip
+    "I turn around. God, this is the last thing I wanna deal with."
+    show anya idle at scene_left with dissolve
+    d "...Hi, Anya."
+#sprite
+    a "What happened last night? You got totally drunk at my party, missed my showcase, then ignored me for the rest of the day."
+    show daisy anxious
+    d "Sorry. I was too hungover."
+
+    a "I mean, like, that’s fine? Shit happens. But, you were ignoring me…{p=1}I was worried."
+
+    show daisy nervous
+    d "Oh um...{w=1} I had to spend time with Samyaza."
+
+    a "You could’ve at least let me know? Instead of hanging up all of the, like, five times I called you. And what was up with that text..?"
+
+    show daisy surprised
+    d "What?? I don’t know what you’re talking about."
+
+    "She scoffs at me, and rummages through her bag for her phone."
+
+    
+    a "Did Samyaza do this?"
+#obj 
+    "She lifts the phone to my face. Apparently, \"I\" told her to leave me alone for the night."
+
+    show daisy anxious
+    d "Oh. That {i}is{/i} weird..."
+
+    a "Yeah, it is."
+
+    "She waits for me to continue."
+    "My head cranes down and I kick some fallen leaves around."
+    "I feel like I’m a child that just got in trouble for something."
+    show daisy nervous
+    "...I try to scramble for a way to word this."
+
+    
+    d "Sorry, she took my phone. I couldn’t say anything."
+
+    a "{b}What?{/b}"
+    show daisy upset
+    "Why is she looking at me like that?{p=1}Like all the other times she has over the years.{p=1}I press my foot onto the ground and ball hand into a fist."
+
+    show daisy nervous
+    d "It was really fast...{w=1} I dunno...{w=1} We were having uhm, a {i}moment{/i} together."
+
+    a "That doesn’t matter. That’s really weird."
+    show daisy angry
+    show anya behind daisy
+    show black screen behind daisy with dissolve:
+        alpha 0.25
+    "What does she know?{p=1}God {i}forbid{/i} someone wants me."
+    show black screen behind daisy with dissolve:
+        alpha 0.5
+    "I’m going to curse her out so fucking bad."
+    show black screen behind daisy with dissolve:
+        alpha 0.75
+    "{cps=*3}She’s just jealous she doesn’t get to have me to herself anymore, to make her look better by comparison.{/cps}"
+    show black screen behind daisy with dissolve:
+        alpha 1
+    "{cps=*3}I’m my own fucking person and I get to make my own decisions. I’m friends with Samyaza because she actually CARES about me and makes me HAPPY.{p=.3}{b}Unlike Anya.{/cps}{/b}"
+    hide black screen with dissolve
+    show daisy idle
+    d "…"
+
+    a "Daisy, that’s {i}weird.{/i} Roommates don’t do that shit."
+
+    show daisy idle smile
+    d "It’s okay, we have that kind of relationship.{p=.2}It’s normal for us.{p=.2}Don’t worry."
+    show daisy anxious
+    "I pray that this is it.{p=.2}That she takes the hint.{p=.2}I don’t want this to go any further than it already has."
+    "Anya pauses, and sulks a bit. She takes a breath, hesitating."
+
+    a "I don’t know. I’m worried...{w=1} Forget it."
+
+    show daisy angry
+    d "{cps=*3}Why?? Are you worried because you’re not used to seeing someone attracted to me? That it's weird that someone’s interested in me, that someone cares enough to look after me? I have a life outside of you too, you know?!"
+
+    a "Stop jumping to conclusions. You know that’s not what I mean, Daisy!"
+    show daisy upset
+    d "Well..?"
+
+    a "I’m worried.{p=1}Worried that even in a new environment, you’re repeating old patterns."
+
+    "My eye twitches. What is she even trying to imply here??"
+    stop music
+    #[♫MUSIC STOP♫]
+    "We stand in silence."
+
+    #[WIND SFX]
+
+    "I’m deluding myself. I don’t want to face the truth."
+
+    show daisy idle
+    d "I’m going to class."
+
+    a "Okay."
+    show daisy at scene_right_far, flip with moveinright
+    "I stomp off. My heart tightens as I try to collect my breathing."
+    a "…{w=.5}Wait, Daisy."
+    show daisy angry at unflip
+    "Furiously whipping my head back to her, I notice she gets a bit taken aback."
+
+    d "{b}What.{/b}"
+
+    a "I care about you…{p=1}I’m here for you, okay?"
+    scene black screen with {'master':dissolve}
+    "I close my eyes, and roll them to the back of my head."
+    "Whatever. She’s telling this to herself so she can feel like she did something, put in the bare minimum effort."
+
+    "I storm off, heading wherever the wind takes me."
+
+    scene yuri_living_room_night with Fade(1,2,1)
+    #INT. APARTMENT LIVING ROOM - NIGHT
+    #[♫PALE MOON, BRIGHT EYES♫]
+    play music "WAV_Pale_Moon,_Bright_Eyes.ogg"
+    #sfx
+
+    "Samyaza’s door might just collapse with the strength I’m pounding at it."
+
+    s "Give me a second!"
+
+    d "Don’t you wanna help me? At any cost?"
+#sfx
+    show angel happy at scene_left,flip with {'master':dissolve}
+
+    "Within a heartbeat, Samyaza’s door swings upon and she greets me with a smile."
+    s "What’s up?"
+
+    show daisy upset at scene_right with dissolve
+    d "Let’s do the second phase.{p=2}Today."
+
+    show angel sad
+    s "I’d love to, but I think you have to wait a bit in between phases."
+
+    d "Am I important to you?"
+
+    show angel confused
+    d "Of course."
+    show daisy anxious
+    "I gulp."
+    show daisy nervous
+    show black screen with {'master':Dissolve(1)}
+
+    d"{size=*.8}…Do you...{w=1}{/size}{size=*.6}love me..?"
+    "If I look up, and don’t see a look of reassurance, I might as well just sink to the ground and die."
+
+    s "{b}Yes.{b}"
+    show angel frown
+    hide black screen with {'master': Dissolve(2)}
+    "Slowly, I lift my head up towards her."
+    "This is the most sure Samyaza has been in her life, despite how long it must’ve been."
+
+
+    show daisy anxious
+    d "Prove it to me."
+
+    s "It might be dangero-{w=1}{nw}"
+    show daisy nervous
+    d "What if the ritual also harmed me? Maybe…{w=1} maybe I wanted to hurt myself yesterday.{p=1}Because of its effects on me."
+
+    "It's like my mouth is moving on its own. What the hell am I even saying??"
+    s "Okay. {nw}"
+    show angel happy
+    extend "Let’s do it."
+    #stop music
+    #EXT. UNIVERSITY PARK - NIGHT
+    scene black screen
+    show daisy anxious at scene_center
+    show angel idle at scene_center_offleft, flip
+    with Fade(1,2,1)
+
+    #[♫PALE MOON, BRIGHT EYES♫]
+    #[WIND SFX]
+    #[CRICKETS SFX]
+    "Samyaza interlocks her pinkie to mine as we walk in the night."
+    "Her free hand carries a tote with different items for the ritual."
+
+    show angel frown
+    s "You know, usually you shouldn’t do this part of the ritual so early on."
+
+    "…"
+
+    show daisy nervous
+    d "Sorry."
+
+    show angel happy
+    "It’s okay! Our connection is strong. My wings jutted out much more than I expected them too."
+
+    show daisy sappy
+    d "Your wings...{w=1} Are pretty..."
+
+    show angel happy big
+    s "Even if you only saw them covered in blood?"
+    d "Yeah...{w=1} I don’t know...{p=1}{size=*.6}I liked them better that way...{/size}"
+    show angel happy
+
+    show daisy anxious
+    d "Uhm." 
+    d "Oh, are they okay though? Like, did you clean them up?"
+
+    s "Don’t worry about it! I’ve been feeling more like myself since we did the first part of the ritual. This second part will be fineeee."
+    show daisy idle
+    show yuri_park_night behind daisy with dissolve
+    "We end up walking to an area behind one of the main buildings."
+
+    s "I like the nighttime down here."
+    show daisy surprised
+    d "Oh, yeah?"
+
+    s "The crickets, they’re always chirping. I think that they’re all communicating with each other. I thought that I’d feel that way with going to public places with humans, and hearing them all chat. But, something about crickets…"
+    s "It makes me sad, but also happy."
+    show angel sad
+    s "...Like I’m missing something."
+    s "I think that it reminds me of home."
+    show daisy upset
+    "I stop in my tracks, she walks a bit more forward then comes back to me. The dread that has been stalking me over and over takes over my body entirely."
+    show daisy with {'master': moveintop}:
+        ypos 2200
+    "I sway down to the ground and bite my swollen lips again, same spot as so many times before."
+
+    show angel confused
+    s "{b}Daisy!{/b} What's wrong?"
+
+    "She analyzes my body, like she’s a nurse examining me."
+    "My nose flares up, my breathing ragged as I stare her down."
+
+    
+    s "What’s going on? Tell me, please? Don’t leave me hanging."
+    show daisy crying at scene_center with dissolve
+    d "{shader=jitter:u__jitter=1.0, 3.0}{size=*.75}Am I not enough?{/shader}{/size}{nw}"
+    d "{size=*.75}Am I not enough?{/size}{fast}"
+    show angel sad
+    s "…"
+
+    d "You don’t see me as home?"
+
+    show angel pain
+    s "No. It’s not like that, it's like-{w=1.0}{nw}" 
+
+    d "Well, what is it like, then?"
+    #movement later
+    show angel frown at unflip
+    "Her breath quickens, she begins to pace around the clearing."
+
+    s "{cps=*3}Well, it’s like. Two homes. Humans, they have two homes too, don’t they? The home they were born and raised in, then the one they live the rest of their life in. It’s like that. Yeah. Like that.{/cps}"
+
+    d "It’s not like that for me...{p=1}...You are my home."
+    show angel desire at flip
+    "Samyaza pets my head. {cps=*3}She’s looking at me like she adores me, but I don’t believe her. Why would she want to leave? I’m here. Isn’t this the same home that punished her, sent her to Earth? Why am I not enough???{/cps}"
+
+    s "I’ll make it work. No matter what happens, this ritual will work for the both of us."
+
+    "{cps=*3}No it won’t. It’s only benefitting her. She’s only using me to get what she wants. {b}Is that why she kissed me?{/i} I’m so mad, my breathing is ragged and dizziness overtakes me. I’ll show her my mind.{/cps}{p=1.0}I breathe steady breaths in and out."
+
+    show daisy anxious
+    d "Okay.{w=1} I believe you."
+
+    show daisy nervous
+    "Samyaza’s fingers interlock into mine. I can’t look her straight in the eye."
+
+    d "Let’s get started."
+    show daisy crying
+    "Gently, she kisses my head. Tears start welling up but {nw}"
+    show daisy upset
+    extend "I rapidly blink them away."
+    show angel idle at scene_left, flip,with moveinleft
+    "Samyaza pulls away, slowly and carefully watching me as she does so. Humans must be fragile compared to what she’s used to..."
+
+    "She takes out a bag of salt, and draws a very large circle, encompassing us. Then, she takes out a shovel."
+    #[EARTH SIGIL POPUP]
+    #[SHOVEL POPUP(?)]
+
+    show daisy surprised
+    d "Where did you get that?"
+
+    show angel happy
+    s "Oh. The apps."
+
+    "I’m too tired to ask. Instinctively, I go up to her and prepare myself to ask if she needs any help. But…{w=1} I’m not a good person…{w=1} {nw}"
+    show angel idle at unflip
+    extend "I stand and watch her begin to shovel out some dirt."
+    show daisy sappy
+    "Her muscles gleam in the moonlight, each movement resembles a practised routine. Her chest rises methodically as she works. I play with my hair, there’s no point in trying to look away anymore."
+
+    show angel frown
+    s "Originally, this step asks for a sacrifice. Usually something temporary. But I couldn’t put you through that."
+
+    show daisy anxious
+    "…"
+    show daisy blush
+    "Would being buried by Samyaza be so bad? Imagining it, my final moments being able to lie down, and be taken care of by her…"
+    show daisy idle
+
+    d "So what are you doing now?"
+
+    s "We’re getting rid of something with heavy energy."
+
+    "After burying a small hole, {nw}"
+    show angel at flip
+    extend "she gets up, and holds her hand out."
+
+    s "Give me your phone."
+
+    show daisy surprised
+    d "But- I have my school stuff on there…"
+
+    s "Do you want this to work?"
+    show daisy anxious
+    d "…Yes…"
+
+    s "Do you have something else we could use?"
+    
+    "My scrapbook. {cps=*3}I should hide it when I get home. It’s been something I’ve been doing forever. I guess it would work better, it's something that grounds me and that’s probably what we need for the Earth ritual. I’m not that good at doing it anyway.{/cps}"
+
+    "But, my blood is cold with the idea of throwing that away. Swiftly, I handed her my phone."
+
+    #[PHONE POP UP]
+
+    show angel idle
+    "She smiles, but it doesn't reach her eye."
+    
+    "The phone is thrown into the ground, and I watch as heaps of dirt are piled on top of it by Samyaza. "
+
+    show daisy idle
+    d "...I feel better without that."
+
+    show angel happy big
+    s "That’s exactly what I want to hear."
+
+    "She draws another sigil with the coarse salt, then she takes my hand and sits us down at the center of the sigil. {nw}"
+    window show
+    scene black screen with {'master': dissolve}
+    window auto
+    extend "She closes my eyes, then joins our hands together."
+    #[BLACK SCREEN]
+    #[♫YOU ARE PERFECT♫]
+    stop music
+    #play sound "WAV_You_Are_Perfect.ogg"
+    #play sound "wav_you_are_perfect.ogg"
+    #play sound "C:\\Users\\fbiga\\ToxicYuri\\VNJAM\\game\\audio\\Gore\\WAV_You_Are_Perfect.ogg"
+    #play sound "audio\\Gore\\WAV_You_Are_Perfect.ogg"
+    #fix music
+    "She begins to recite something in that incomprehensible language again. While our eyes are closed…{w=1} I think of the last time. Our tongues interlocking, her sweltering body mixing into mine.{w=1} ...I have to focus."
+    "Our hands are clasped together, I want her to be done with reciting for the ritual."
+    "Because I can't stop wishing that her hand would slip down my to my thigh, then come up to-{w=1.5}{nw}"
+
+    #show angel frown
+    s "Dammit…!"
+    scene white screen
+    show red screen:
+        alpha 0.8
+    with dissolve
+    #[SCREEN SLOWLY GETS BRIGHTER, TO THE RED COLOR FROM EARLIER]
+
+    "She groans in pain, I’m unsure if I should keep my eyes closed, but I bite my lip. I want to massage her wings again. I want my sweat and her blood to mix together and for us to become one."
+
+
+    s "Agh...{w=1} Fuck."
+
+    "Samyaza writhes on the ground. I take deeper breaths and bite my lips. She must be sweaty, on the ground and her face contorting in pain. But she only wants to make me feel better, so even though she’s hurting so much, she gets on top of me and kisses me. Our tongues would dan-{w=2}{nw}"
+
+    s "Daisy….gghh.."
+
+    "-ce together. We’d then-{w=1}{nw}"
+
+    s "Daisy… help…"
+    camera:
+        zpos -500
+        xpos 100
+        ypos -200
+    scene white screen
+    show angel pain open at scene_center
+    show daisy surprised at scene_center_offright
+    with dissolve
+    "I’m wide awake. Samyaza is engulfed in a blinding aura. Pockets of lights seep through every hole in her body. It looks like daytime."
+
+    show angel pain closed with vpunch
+    s "AAAGGHH..!"
+
+    "Her wings keep contracting in and out, they’re unable to reach past the halfway point. {nw}"
+    show red screen with {'master': dissolve}:
+        alpha 0.3
+    extend "Blood soaks the salt circle. The light that emits from her body burns my pupils."
+
+    show daisy nervous
+    d "What do I do??!!!?"
+    
+    "I kneel down to Samyaza, holding her. Letting my eyes be taken over by the blazing light. Her body is sweltering, my hands burn."
+
+    show angel pain open
+    s "E…{w=.3}Erase the circle!! Now!"
+    show white screen as ws
+    show red screen:
+        alpha 0.8
+    with {'master':dissolve}
+    "I dash to the salt. Kicking everything away. Mix it in with the dirt."
+
+    "I trip on myself, and she lets out a large bellow of pain as I do so."
+    "I’m not fast enough."
+    "{b}I’m not enough.{/b}"
+    "It takes too long to clear it away, so I get down on my knees and mix the salt with the dirt to make it disappear. My fingernails quickly change color."
+
+    "As I pant harder and harder, Samyaza’s screaming subsides. I rush over to her, shaking her body."
+    hide white screen as ws
+    hide red screen
+    show daisy nervous
+    show angel pain open
+    with dissolve
+    
+    d "Samyaza.. Are you okay??"
+
+    "She’s too out of it."
+    show daisy upset
+    d "SAMYAZA!"
+    hide white screen
+    show yuri_park_night behind daisy, angel
+    with {'master':dissolve}
+    "The light begins to dim. She stirs."
+    
+    s "My… wings."
+
+    "I get to massaging them, moving with the same inhuman speed Samyaza has. It’s more tender than usual, and the feathers of her wings fall off a lot quicker."
+    show daisy blush
+    "As she leans her head into the crook of my shoulder, her whines are muffled. I should move my shoulder, I want her to kiss me so badly that I keep licking my lips."
+    show angel desire at flip with dissolve
+
+    s "Mmm…{w=1} that…{w=1} felt...{w=1} {b}better.{/b}"
+    show daisy anxious
+    "{cps=*3}This isn’t fair. I wish I was in her position. Why can’t she massage me? It would feel so good. I could imagine her warm fingers working through my back, just how good it would feel and-{w=2}{/cps} Wait."
+    show daisy nervous
+    "{cps=*3}Why am I even thinking this way, she could’ve died- or whatever would happen to someone like her.{/cps}"
+    stop music
+    #[♫MUSIC STOP♫]
+    #[WIND SFX]
+    #[CRICKETS SFX]
+
+    d "...You should’ve had another roommate."
+
+    show angel sad
+    s "No. It can only be you."
+
+    "It takes someone nonhuman to like me…{w=1} Hah."
+
+    show daisy crying
+    d "No, I don’t deserve you."
+    show angel happy big
+    "Samyaza weakly pets my cheek. Her hands are sticky with blood, my face drenched in sweat. Only a nonhuman could find beauty in whatever horrific state my face is in."
+
+    show daisy blush
+    d "I…{w=1} {size=*.6}wanted to… kiss you.{/size} Like last time..."
+    show angel idle
+    show daisy nervous
+    show angel frown
+
+    "She doesn’t say anything."
+    
+    d "You should’ve buried me."
+    scene black screen with dissolve
+    "She leans in, once again."
+    "My mouth feels like it's on fire."
+    "Her hand gently holds onto my jaw as she kisses me deeper and more fervently."
+    "{cps=*3}More, more, more {b}please{/b}. Go as deep as you can go, Samyaza. I feel her other hand slide onto the small of my back, then grope me underneath my clothes. I let out a small yelp, the most I could do in my current state.{/cps}"
+    "{cps=*3}I can’t remember the last time someone has touched me like this, and her warm fingers feel so good, so different than anything I’ve ever felt. It feels so overwhelming, both physically and mentally. Like a drug.{/cps}"
+    "{cps=*3}I could barely kiss back, tears mixing in with the sweat. I wish she could just kiss me like this forever. I wish she could take control of me and make me feel things I’m not allowed to feel but I’ve instead just been...{/cps}"
+
+    "I need to pull myself together."
+
+    "I push away. Burying my face in my hands, my lip quivers as I start to sob."
+    "Samyaza softly showers me with kisses."
+    "Each one makes me feel so disgusted with myself."
+    "My body is glued to the ground."
+    "I try to pull away and accept that I don’t deserve this.{p=1}But each peck makes me want to lean into her more and more."
+
+    d "...We should get cleaned up."
+
+    "I get up, pull Samyaza up, and help her walk back to the apartment."
+
 
     "...DEMO END"
     "..."
@@ -2786,6 +3283,62 @@ label start:
     "...TEMP END"
     
     return
+'''
+    INT. APARTMENT LIVING ROOM - NIGHT
+    [♫PALE MOON, BRIGHT EYES♫]
+
+    Samyaza’s door might just collapse with the strength I’m pounding at it.
+
+    SAMYAZA
+    Give me a second!
+
+    DAISY
+    Don’t you wanna help me? At any cost?
+
+    Within a heartbeat, Samyaza’s door swings upon and she greets me with a smile.
+
+    SAMYAZA
+    What’s up?
+
+    DAISY
+    Let’s do the second phase. Today.
+
+    SAMYAZA
+    I’d love to, but I think you have to wait a bit in between phases.
+
+    DAISY
+    Am I important to you?
+
+    SAMYAZA
+    Of course.
+
+    I gulp.
+    DAISY
+    …Do you love me..?
+
+    If I look up, and don’t see a look of reassurance I might as well just sink to the ground and die.
+
+    SAMYAZA
+    Yes.
+
+    Slowly, I lift my head up towards her. This is the most sure Samyaza has been in her life, despite how long it must’ve been.
+
+
+    DAISY
+    Prove it to me.
+
+    SAMYAZA
+    It might be dangero-
+
+    DAISY
+    What if the ritual also harmed me? Maybe… maybe I wanted to hurt myself yesterday. Because of its effects on me.
+
+    It's like my mouth is moving on its own. What the hell am I even saying??
+
+    SAMYAZA
+    Okay. Let’s do it.
+'''
+
 '''
     play music fishy_aroma
 
