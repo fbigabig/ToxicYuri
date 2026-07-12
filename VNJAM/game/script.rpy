@@ -2408,9 +2408,11 @@ label start:
     "I..{w=1} {size=*.75}I couldn’t…{w=1}{/size}That’s too crass, she’s {b}just my roommate.{/b}"
 
     "…"
-    scene red screen with dissolve
+    show red screen with dissolve:
+        alpha 1
     "My hands were covered in blood and sweat."
-    show angel pain open behind daisy with None
+    show daisy anxious
+    show angel pain open behind daisy
     hide red screen 
     show red screen as rs:
         alpha 0.2
@@ -2426,24 +2428,29 @@ label start:
     "She leans up quickly, and kisses me."
     "Her hands wrap around me, going lower, and lower..."
 
-    "Her lips are hot.{p=.5} Were mouths supposed to be this warm?"
+    "Her lips are hot.{p=.5}Are mouths supposed to be this warm?"
     "It felt like my lips were on fire."
     "Our tongues begin to collide."
     "{b}This still isn’t enough.{/b}"
     "I went deeper and deeper into her."
     "We’d occasionally pull away, to look at each other’s face."
-    show angel desire at scene_center with dissolve
+    show angel desire at scene_center 
+    show angel:
+        ypos 1500
+    with dissolve
     "Her skin was perfect, she wasn’t blinking at all."
     hide angel with dissolve
 
-    "We pulled back into each other. This. Isn’t {b}{size=*1.5}enough.{/size}{/b}"
-    "{cps=*3} I want to collide with her. Her heat isn’t enough, no matter how close I get I keep getting frustrated. {/cps}"
+    "We pulled back into each other. This. {size=*1.25}Isn’t{/size} {b}{size=*1.5}enough.{/size}{/b}"
+    "{cps=*3} I want to collide with her. Her heat isn’t enough.{p=0.2}No matter how close I get, I keep getting frustrated. {/cps}"
 
     "She pulls away, petting my face."
+    camera:
+        xpos 0 ypos 0 zpos 0
     show white screen
     show black screen:
         alpha 0.6
-    show red sceen:
+    show red screen:
         alpha 0.2
     with dissolve
     "I lean in."
@@ -2453,20 +2460,21 @@ label start:
     "The bodily fluids lubricate my hands."
     "I stroke the oil through her feathers, letting them open up."
     show daisy sappy at scene_center
-    show angel pain open at scene_left
-    with dissolve
+    show angel pain open behind daisy at scene_left
+    with {'master': Dissolve(3)}
     "As I up the intensity, she {b}trembles{/b} into me."
     show angel at flip
     "We softly whimper into each other- the kiss muffles any noises that could come out."
     "I feel like I’m on fire."
     "I pant."
-    "I stroke her wings"
+    "I stroke her wings."
     show angel at scene_center_offleft, flip with moveinright
     "She leans further into me."
     "Further and further."
 
     #[♫MUSIC ABRUPT STOP♫]
     #[♫ HEARTBEAT♫]
+    show daisy nervous
     show angel at scene_left with moveinleft
     "I push her away."
     show daisy upset at flip
@@ -2474,35 +2482,40 @@ label start:
     d "I..{p=1}I’m sorry."
 
     s "...It’s okay."
-    show daisy anxious
+    show daisy upset
     show angel behind daisy
-    show black screen behind daisy:
+    
+    show black screen as bs behind daisy:
         alpha 0.2
     with dissolve
     "She looks at me with so much adoration my stomach feels like it's collapsing."
-    show black screen behind daisy:
+    show black screen as bs behind daisy:
         alpha 0.4
     with dissolve
     show daisy nervous
     "My whole body feels like it could turn in on itself."
-    show black screen behind daisy:
+    show black screen as bs behind daisy:
         alpha 0.6
     with dissolve
     "I'll become a pile of meat and blood."
-    show black screen behind daisy:
+    show black screen as bs behind daisy:
         alpha 0.8
     with dissolve
 
-    d "No…{w=1} {cps=(2}No. I shouldn’t have. I need to {i}help{/i} you now.{/cps}"
+    d "No…{w=1} {cps=*2}No. I shouldn’t have. I need to {i}help{/i} you now.{/cps}"
 
-    hide black screen
+    hide black screen as bs 
+    show yuri_living_room_night behind daisy, angel
+    with dissolve 
     show angel frown
     with dissolve
     s "No. You’re not going to. {nw}"
     show angel desire
     extend "A cute lady like you should just sit herself down and look pretty."
-    show angel frown at offscreenleft with moveinleft
-    "She gets up, and heads to the bathroom. {p=1{nw}"
+    show angel frown 
+    "She gets up, {w=.5}{nw}"
+    show angel at offscreenleft with {'master': moveinleft}
+    extend "and heads to the bathroom. {p=1}{nw}"
     #sfx
     extend "The door slamming shut rings throughout the entire apartment."
     scene room daisy night with Fade(1,2,1)
@@ -2511,181 +2524,240 @@ label start:
     "Viscous hands stick to my knees."
     "The smell of blood permeates through my room."
     "It’s thick, like I’m in an angelic slaughterhouse."
-
+    show daisy anxious at scene_center_offright with {'master': dissolve}
     "I sit up."
-    show daisy anxious at scene_center with moveinleft
-    "I open drawers, aimlessly searching for a familiar cold object."
-    "I look through the pile of stuff in my corner- not here.{p=.5} I look through my desk- it’s not there either.{p=.5} I look thr-{w=.5}{nw}"
+    
+    "I open drawers, aimlessly searching for any kind of familiar cold steel."
+    "I look through the pile of stuff in my corner- not here.{p=.5}I look through my desk- nothing there either.{p=.5}I look thr-{w=.5}{nw}"
 
 
     #[♫MUSIC STOP♫]
     #[DOOR CREAK SFX]
-    show angel sad at scene_left with moveinright
+    show angel sad at scene_left, flip with moveinleft
     s "…Daisy..."
     show daisy nervous
     "Why did she have to walk in?{p=1}Frozen, I stare like a deer in headlights."
-    show angel sad at scene_center with moveinright
+    show angel sad at scene_center with moveinleft
 
     "She walks towards me." 
     "Tensing my entire body, I brace myself."
-    show red screen:
-        alpha: 0.2
+    show red screen with dissolve:
+        alpha 0.2
     "A hot hand gently touches my face."
     "It burns."
+    show daisy sappy
 
     "And yet, I tilt into the touch."
-
+    show daisy anxious
     "Samyaza is clean, and her wings have been tucked back inside of her body."
     "I should ask if she’s okay, or what even happened."
 
-    "...{w=1}I shouldn’t pull the stunt I did earlier.{p=1}I’m {b}disgusting.{/b}"
+    "...{w=1}I shouldn’t pull the stunt I did earlier.{p=1}{nw}"
+    show daisy upset
+    extend "I’m {b}disgusting.{/b}"
     show daisy blush
-    "I kiss her hand.
+    show black screen with dissolve
+    "I kiss her hand."
+    hide black screen with dissolve
+    #sprite?
+    s "Are you ok?"
 
-    SAMYAZA
-    Are you ok?
+    show daisy anxious
+    d "What about you?"
 
-    DAISY
-    What about you?
+    #SAMYAZA (scary sprite)
+    show angel scary
+    s "That doesn’t matter."
+    show red screen with {'master': Dissolve(1)}:
+        alpha 0.2
+    "I let her hand sear my cheek. "
+    show daisy nervous
+    d "Oh."
 
-    SAMYAZA (scary sprite)
-    That doesn’t matter.
+    show angel confused
+    s "...?"
 
-    I let her hand sear my cheek. 
+    d "Um.{p=1}I have to do a medical thing."
 
-    DAISY
-    Oh.
+    "Standing there, I wait for her to say something."
+    "I should kick her out.{p=.2}She doesn’t need to be here for my routine."
 
-    SAMYAZA
-    ?
+    #[♫BY YOUR SIDE♫]
+    show angel happy
+    s "I’ll help!"
 
-    DAISY
-    Uhm. I have to do a medical thing.
+    show daisy surprised
+    d "Have you...{w=.5} {i}ever{/i} administered a shot before?"
+    show angel confused
+    "Tilting her head, she furrows her brows."
 
-    Standing there, I wait for her to say something. I should kick her out, she doesn’t need to be here for my estrogen shot.
+    s "…No…?{w=.5} Or..{w=.5} I think..?{p=.5}I don’t remember if I’ve seen my humans in the past do something like that."
 
-    [♫BY YOUR SIDE♫]
-    SAMYAZA
-    I’ll help.
+    show daisy idle smile
+    d "Oh, then, don’t worry! I can do it myself."
+    show angel scary
+    "She swiftly pulls my wrist away from the supplies I was about to grab."
 
-    DAISY
-    Have you ever administered a shot before?
+    s "I got it."
+    window show
+    scene black screen with {'master': dissolve}
+    "She places a hand on my thigh and sits me down onto my bed." 
+    "The contact makes something deep within my core...{w=1} {b}tremble.{/b}"
+    "Without a word, I watch her as she picks up the vial and cleans the top of it with an alcohol wipe."
+    #[SYRINGE AND VIAL POP UP]
+    "Unwrapping the packaging of the syringe, she spins a pink thick-gauge needle on top."
+    "Despite her lack of confidence earlier, she’s like a nurse, methodical and precise."
 
-    Tilting her head, she furrows her brows.
+    s "How much?"
 
-    SAMYAZA
-    …No…? Or.. I think..? I don’t remember if I’ve seen my humans in the past do something like that.
+    d "Oh, uh .3 mL, but really it’s oka-{w=1}{nw}"
 
-    DAISY
-    Oh then, don’t worry I can do it myself.
+    "She doesn’t answer me, instead flipping the vial over and closing one of her eyes to focus on coaxing out the exact dosage into the syringe."
+    "Not even I could do that when I first started out...{p=1}She switches out the needle for a skinnier, orange one and stares at my legs."
+    scene room daisy night
+    show angel idle at scene_center, flip:
+        ypos 1500
 
-    She swiftly pulls my wrist away from the supplies I was about to grab.
+    show daisy nervous at scene_center_offright:
+        ypos 1500
+    camera:
+        xpos 150 ypos 150 zpos -500
 
-    SAMYAZA
-    I got it.
-    She places a hand on my thigh and sits me down onto my bed. The contact made something deep within my core tremble.
-    Without a word, I watch her as she picks up the vial and cleans the top of it with an alcohol wipe.
-    [SYRINGE AND VIAL POP UP]
-    Unwrapping the packaging of the syringe, she spins a pink thick-gauge needle on top. Despite her lack of confidence earlier, she’s like a nurse, methodical and precise.
+    show black screen
+    show daisy blush
+    hide black screen 
 
-    SAMYAZA
-    How much?
+    with {'master': Dissolve(2)}
 
-    DAISY
-    Oh, uh (insert here) but really it’s oka-
+    #"Her gaze me out of it. {nw}"
+    " I’m painfully aware of her gaze on me."
+    "I slowly ride my skirt up."
+    show daisy nervous
+    "Being careful to make sure it covers my old scars." 
+    "She taps the air bubbles out of the syringe."
+    show daisy sappy
+    show red screen with dissolve:
+        alpha 0.2
+    "I can’t handle the heat I’m feeling within me."
+    hide red screen with dissolve
+    "She holds the syringe in her mouth while she pats around my leg." 
+    "Her warm hand is on my thigh."
+    "Roommates do things like this, {b}totally{/b}."
+    show angel frown
+    show daisy nervous
+    "She feels my thigh up and down, burning with an intense concentration as she looks for a suitable spot."
+    show daisy sappy
+    "{shader=jitter:u__jitter=1.0, 3.0}{b}Her hands feel so good.{/b}{/shader}{nw}"
+    "{b}Her hands feel so good.{/b}{fast}"
+    show daisy blush
+    "I’m so glad I forgot to do my shot yesterday."
 
-    She doesn’t answer me, instead flipping the vial over and closing one of her eyes to focus on coaxing out the exact dosage into the syringe. Not even I could do that when I first started out.. She switches out the needle for a skinnier, orange one and stares at my legs. I’m painfully aware of her gaze on me. I slowly ride my skirt up. Being careful to make sure it covers my old scars. As I’m taking my clothes off, she’s tapping the air bubbles out of the syringe in preparation for the injection. I can’t handle the heat I’m feeling within me.
+    "She stops at the upper side of my thigh, and wipes down the spot."
+    show daisy anxious
+    "It’s time."
+    show daisy nervous
+    "I’ve done this so many times before, {cps=*5}I don’t know why my heart just keeps beating faster and faster.{/cps}"
 
-    She holds the syringe in her mouth while she pats around my leg. Her warm hand is on my thigh. Roommates do things like this, totally. She feels my thigh up and down, she burns with an intense concentration as she looks  for a suitable injection spot. Her hands feel so good. I’m so glad I forgot to do my shot yesterday.
+    show angel happy
+    s "Ready?"
+    "I nod."
+    show angel frown
+    show red screen with {'master': dissolve}
+    "She pinches a spot in my thigh and quickly injects my hormones."
+    "My breath hitches in my throat." 
+    hide red screen with {'master': dissolve}
+    "The needle remains there for a few seconds, but then she takes it out and replaces it with a green bandaid."
+    show angel desire
+    show daisy idle
+    "She pats that spot on my thigh once again.{p=1}I let out a breath that I didn’t even realize I was holding."
+    show angel happy big
+    s "Aand, all done? How was that?"
+    show angel sad
 
-    She stops at the upper side of my thigh, and makes a note of a spot. It’s time. I’ve done this so many times before, I don’t know why my heart just keeps beating faster and faster.
+    "She notices my expression, or I guess lack thereof."
+    
+    s "{cps=*3}Oh no! Did I mess up? I’m so sorry, Daisy-{/cps}{w=1}{nw}"
+    show daisy happy
+    d "No, no, it’s okay, you didn’t do anything wrong. Thank you. Really, this is the most anyone has eve-{w=1}{nw}"
 
-    SAMYAZA
-    Ready?
-    I nod.
+    #[PHONE RING SFX] 
+    #[♫MUSIC STOP♫]
+    show daisy anxious
+    "My phone rings." #cut
+    show daisy upset
+    "It’s Anya."
+    "I reach out for my phone."
 
-    She pinches a spot in my thigh and quickly injects my hormones. My breath hitches in my throat. The needle remains there for a few seconds before she takes it out and replaces it with a green bandaid. She pats that spot on my thigh once again and I let out a breath that I didn’t even realize I was holding.
+    #[PHONE POP UP]
+    show angel scary
+    "Maybe the ritual really did work, because with {b}unearthly{/b} speed, Samyaza grabbed my phone and hung up the call."
+    show angel idle
+    #[♫MUSIC RESUME♫]
+    window hide
+    pause 3.0
+    window auto
+    show daisy anxious
+    d "I should.. Probably pick that up."
 
-    SAMYAZA
-    Aand, all done? How was that?
+    show angel confused
+    s "Why? Wasn’t she the one who made you upset yesterday?"
 
-    She notices my expression, or I guess lack thereof.
+    show daisy surprised
+    d "Uh..."
 
-    SAMYAZA
-    Oh no! Did I mess up? I’m so sorry, Daisy-
-    DAISY
-    No it’s, okay, you didn’t do anything wrong. Thank you. Really, this is the most anyone has eve-
+    show angel sad
+    s "I...{w=1} missed you a {b}lot{/b} last night..."
 
-    [PHONE RING SFX] 
-    [♫MUSIC STOP♫]
+    show daisy idle smile
+    d "...Yeah. Me too. "
 
-    It’s Anya. I reach out for my phone.
+    
+    s "Like, really, really missed you."
 
-    [PHONE POP UP]
+    show daisy anxious
+    d "...Me too.."
 
-    Maybe the ritual really did work, because with unearthly speed, Samyaza grabbed my phone and hung up the call.
+    show angel happy
+    s "I want to make you happy, Daisy.{p=1}{nw}"
+    show angel happy big
+    extend "{b}Let me.{/b}"
 
-    [♫MUSIC RESUME♫]
+    show daisy idle smile
+    d "You do, though!"
 
+    show angel frown
+    s "You were about to hurt yourself, weren’t you?"
+    show daisy nervous
+    "I look at my fingers, playing with my nails."
+    camera:
+        linear 2 xpos 150 ypos 100 zpos -700
+    "Samyaza’s hand rests on mine, and she leans her head in."
+    show angel desire
+    
+    s "Please.{p=1}Let me make you happy…{p=1}I don’t know what I’d do without you.{p=1}I don’t know what I’d fill my days with."
 
-    DAISY
-    I should.. Probably pick that up.
+    d "…"
 
-    SAMYAZA
-    Why? Wasn’t she the one who made you upset yesterday?
+    show angel happy
+    s "I...{p=1}I can finally make it back to heaven.{p=1}I think."
 
-    DAISY (confused sprite)
-    Uh..
+    s "What you saw earlier, my angelic form is coming back to me."
+    show angel desire
+    s "With that, you’ll {b}have me.{/b} I can help you more than Anya ever has."
+    show daisy sappy
+    scene black screen with {'master': Dissolve(4)}
+    "Exhaustion must’ve taken over me. My mouth betrays me as I yawn instead of responding to her. I just lay my head on her."
 
-    SAMYAZA
-    I.. missed you a lot last night..
+    "I guess I'm going to help Samyaza go back to heaven. She can return to her family.{p=1}Away from me."
+    "She needs me so badly, but she also badly needs to leave."
 
-    DAISY
-    Yea. Me too. 
+    "You don’t know what you’d do without me, but you’re using me to leave me."
 
-    SAMYAZA
-    Like, really, really missed you.
+    "I snuggle up to her, and drift away."
 
-    DAISY
-    ..Me too..
+    #[♫MUSIC FADE OUT♫]
 
-    SAMYAZA
-    I want to make you happy, Daisy. Let me.
-
-    DAISY
-    You do, though!
-
-    SAMYAZA
-    You were about to hurt yourself, weren’t you?
-
-    I look at my fingers, playing with my nails.
-
-    Samyaza’s hand rests on mine, and she leans her head in.
-
-    SAMYAZA
-    Please. Let me make you happy… I don’t know what I’d do without you. I don’t know what I’d fill my days with.
-
-    DAISY
-    …
-
-    SAMYAZA
-    I.. finally can make it back to heaven. I think.
-
-    What you saw earlier, my angelic form is coming back to me.
-
-    With that, you’ll have me. I can help you more than Anya ever has.
-
-    Exhaustion must’ve taken over me, my mouth betrays me as I yawn instead of responding to her. Instead, I lay my head on her. 
-
-    I guess I'm going to help Samyaza go back to heaven. She can return to her family. Away from me. She needs me so badly, but she also badly needs to leave.
-
-    You don’t know what you’d do without me, but you’re using me to leave me.
-
-    I snuggle up to her, and drift away.
-
-    [♫MUSIC FADE OUT♫]
-
-    "..."
+    "...DEMO END"
     "..."
     "..."
     "..."
