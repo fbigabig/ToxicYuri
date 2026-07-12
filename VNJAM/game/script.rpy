@@ -221,14 +221,14 @@ label start:
     "I can already imagine it, her staring at all of my trinkets and making an extremely thinly veiled comment about how I “oughta declutter now that I’m starting a new leaf.” Yeah right."
 
     "I remember when we worked on a science project together back in high school. I was kind of bad with putting our presentation together.{w} I could just {b}tell{/b}{w=0.2} she didn’t want to stay after school with me."
-    "She was so quiet- it was offputting for her. {p}Her silence could only mean that her mind was filled with all sorts of insults about me."
+    "She was so quiet- it was offputting for her. {p=1}Her silence could only mean that her mind was filled with all sorts of insults about me."
 
     a "You sure? I'm worried about you!" 
     #(laugh sprite) 
     extend "This may be mean, but I was thinking... You’re so out of shape that you might snap in half while picking up heavy boxes! We should really go to the gym together..."
 
     show daisy nervous
-    "I can’t help but to make a face...{w}Does Anya really see me like that? Does she really think I can't lift a few boxes on my own? I'm not dumb; I know what people have said about me behind my back and even to my face- I guess I just didn't expect Anya to be like that too.."
+    "I can’t help but to make a face...{w=1}Does Anya really see me like that? Does she really think I can't lift a few boxes on my own? I'm not dumb; I know what people have said about me behind my back and even to my face- I guess I just didn't expect Anya to be like that too.."
 
     a "...By the way, I’m hosting a welcome back party this Sunday. You should totally come! I really think you’d like Hannah. You guys are both artists! She’s actually graduating this fall, and has an animation job lined up! Wait. Have you chosen your major yet? "
 
@@ -242,10 +242,10 @@ label start:
     d "{size=*.75}I’m sorry...{/size}"
 
     a "Don’t worry! I’ll just make sure to check up on you."
-    hide anya
-    show daisy upset at scene_center
-    "I look away, deciding to focus on the leaves as they sway. I hate that I have to acknowledge that Anya looks down on me. "
-    show anya idle at scene_center_offright
+    #hide anya
+    show daisy upset at flip
+    "I look away, deciding to focus on the leaves as they sway. I hate that I have to acknowledge that Anya looks down on me. {w=1.0}"
+    show anya idle at scene_center with {'master': moveinright}
     extend "She leans in and smiles at me. It feels like a sneer."
 
     "My entire body sinks. Bitter feelings gnaw at my heart. I try to tune back into Anya’s lecture but I can’t ignore the resentment. I wish I could be her equal, but I’ve let myself fall behind."
@@ -253,8 +253,8 @@ label start:
     "While deep in thought, I felt a hand touch my shoulder. My body stiffens for a moment."
 
     a "Daisy, I think you’ll have a great time here, really. It’s nothing like home. People are a lot nicer here, I swear."
-    show daisy idle smile
-    "I give her an awkward smile.{p} One that doesn’t reach my eyes. {p}I look down, fiddling with my fingers.{w} Anya is the type of person everyone likes."
+    show daisy idle smile at unflip
+    "I give her an awkward smile.{p=.5}One that doesn’t reach my eyes. {p=.5}I look down, fiddling with my fingers.{w=1} Anya is the type of person everyone likes."
 
 
     d "..Thanks.."
@@ -1036,11 +1036,11 @@ label start:
         perspective True
         zpos -600 xpos -450  ypos -250
     scene yuri_living_room_night 
-    show daisy anxious at flip, scene_left_far
-    show angel sad at scene_center_offleft, flip
+    show daisy anxious at scene_center_offleft
+    show angel sad at scene_left_far , flip
     show black screen
     hide black screen with dissolve
-    "Samyaza sits, she’s hunched over, still catching her breath. Her exhaustion is palpable"
+    "Samyaza sits, she’s hunched over, still catching her breath.{p=1.0}Her exhaustion is palpable"
 
     "I walk over, handing her a warm cup of tea. I’m so useless, I can never really help people. I want to do more for her, but I’m still frazzled from whatever the hell just happened. I dig my nails into my legs."
 
@@ -1061,7 +1061,7 @@ label start:
     camera:
         perspective True
         linear 2.0 zpos 0 xpos 0  ypos 0
-    show daisy at scene_right,unflip with MoveTransition(2.0, leave=offscreenleft, leave_time_warp=_warper.easeout) #tbd define this
+    show daisy at scene_center,unflip with MoveTransition(2.0, leave=offscreenleft, leave_time_warp=_warper.easeout) #tbd define this
     "I uncomfortably scooch away. I still feel the heat emitting from her, but I’m far enough to be edged by it."
     show angel at flip
     s "I should tell you about something."
@@ -1092,7 +1092,7 @@ label start:
     "After that, she takes off her vest. Two painful bumps, almost like large hard cysts infested themselves on her back. Her sweat glistens under the light of the cheap ikea lamp."
 
     s "Feel them."
-    show daisy at scene_center with moveinleft
+    show daisy at scene_center_offleft with moveinleft
     show white screen with dissolve:
         alpha 0.25
     show daisy sappy
@@ -1235,20 +1235,24 @@ label start:
     show daisy nervous
     d "I don’t know if I like this story."
 
-    show daisy crying at flip, scene_right_far with moveinright
+    show daisy crying at flip, scene_center with moveinright
     "I tear up, facing away."
     show angel confused
     s "You don’t want to help me?"
-    show angel pain
+    #show angel pain
+    show daisy surprised at unflip
+    
     d "{b}{shader=jitter:u__jitter=1.0, 3.0}No, that’s not what I meant!{/b}{/shader}{nw}"
+    show angel confused
     d "{b}No, that’s not what I meant!{/b}{nw}{fast}"
     show angel sad
+    show daisy anxious
     s "I need a human to help me with this ritual. The only person I want to help me is you."
 
-    show angel desire at scene_center_offright with moveinright
+    show angel desire at scene_center_offleft with moveinright
     "She scoots closer to me, but I feel like I'm sinking.{p=1.0}Some stupid girl like me would probably just mess it up. "
 
-    s "You’re the most beautiful human I’ve met. You have the brains to do this."
+    s "You’re the most beautiful human I’ve ever met.{p=1.0}You have the brains to do this."
     show daisy blush
     "I blush. She’s probably just trying to fool me. I won’t fail for these tricks. Something as ethereal as her could never love me."
 
@@ -1277,7 +1281,7 @@ label start:
 
     "I figure I should ask about the details for that, but before I can open my mouth,{nw}"
     show angel sad at scene_center,unflip with {'master': moveinleft}
-    extend "Samyaza walks over to me, holding my injured hand."
+    extend " Samyaza walks over to me, holding my injured hand."
 
     
     s "Don’t worry, I will make sure you are safe."
@@ -1339,17 +1343,17 @@ label start:
 
     "Samyaza holds my burnt wrist once again, softly petting it. A small smile began to escape my lips." #gets closer, she 
 
-    show daisy blush at unflip
+    show daisy blush at flip
     d "I think.. I’ll help you out."
     #sprite here
 
     show angel happy big at scene_center_offleft with moveinleft
-    show daisy at unflip
+    show daisy
     "Samyaza grinned and pulled me into a tight hug. {nw}"
     show daisy sappy
     extend "She smells and feels like a warm and fuzzy lightbulb."
 
-    "An intense nagging tugs at my heart, but it doesn’t matter.{p=1} I can’t afford having Samyaza hate me."
+    "An intense nagging tugs at my heart, but it doesn’t matter.{p=1}I can’t afford having Samyaza hate me."
 
     "Samyaza needs me. I need her."
     scene black screen with dissolve
@@ -1403,7 +1407,10 @@ label start:
     #sprite here
     show angel happy
     s "It’s perfect. "
-
+    show angel desire
+    camera:
+        perspective True
+        linear 3.0 zpos -400 xpos -250 ypos -150
     "She places her hands over mine. I want to look away but her eyes are so intense. {nw}"
     show daisy blush
     extend "My heart begins to beat quickly."
@@ -1450,7 +1457,7 @@ label start:
     show angel scary
     #sprite here
     s "He doesn’t make mistakes."
-    show angel idle
+    show angel frown
     show daisy at scene_left_far, unflip with moveinright
     "I look to the side and walk a bit further from her. I pick at my fingers as she keeps browsing. "
     show angel at flip
@@ -1473,14 +1480,14 @@ label start:
 
     d "{cps=*2}Uhm, yea, I’m able to make it tonight. Yea. That sounds good. Yea, yea I’ll see you.{w=.1}{/cps} Bye."
     #sprite
-    show angel smile
+    show angel happy
     "Samyaza doesn’t have to say anything, she gives me her typical smile."
-    
+    show daisy at flip
     d "Sorry, I forgot to tell you, Anya has a party tonight..{w=1} I guess we’ll have to start the stuff for the ritual tomorrow."
 
     #SAMYAZA (strained smile) sprite
-    show angel frown
-    s "That’s okay. Just make sure you’re free tomorrow."
+    show angel sad
+    s "That’s okay... Just make sure you’re free tomorrow."
     show daisy idle smile
     d "It’s okay. I finished all my homework yesterday, so there shouldn’t be any distractions like before. I’m free."
     show angel idle
@@ -1488,7 +1495,9 @@ label start:
     scene black screen with dissolve
     "As Samyaza checks out, her free hand grazes mine. My hand moves like something else possesses my body, and my finger curls into hers."
     pause 1.0
-
+    camera:
+        perspective False
+        zpos 0 xpos 0 ypos 0
     scene anya_house with Dissolve(4.0)
     show anya idle at scene_center
     show mob_dress at scene_center_offleft

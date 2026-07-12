@@ -28,11 +28,11 @@ define config.check_conflicting_properties = True
 define gui.accent_color = '#0099cc'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#888888'
+define gui.idle_color = '#444444'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
-define gui.idle_small_color = '#aaaaaa'
+define gui.idle_small_color = '#222222'
 
 ## The color that is used for buttons and bars that are hovered.
 define gui.hover_color = '#66c1e0'
@@ -42,7 +42,7 @@ define gui.hover_color = '#66c1e0'
 define gui.selected_color = '#ffffff'
 
 ## The color used for a text button when it cannot be selected.
-define gui.insensitive_color = '#8888887f'
+define gui.insensitive_color = '#6767677f'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
@@ -63,7 +63,7 @@ define gui.text_font = "fonts/BalsamiqSans-Regular.ttf"
 define gui.name_text_font = "fonts/Gaegu-Bold.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "fonts/NotoSans.ttf"
+define gui.interface_text_font = "fonts/BalsamiqSans-Regular.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 33
@@ -436,7 +436,7 @@ init python:
         gui.name_text_size = 54
         gui.notify_text_size = 38
         gui.interface_text_size = 45
-        gui.button_text_size = 45
+        gui.button_text_size = 451
         gui.label_text_size = 51
 
         ## Adjust the location of the textbox.
