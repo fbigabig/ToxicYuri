@@ -180,3 +180,4 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 /erithoughts
+/GUARDIAN-1.0-dists
