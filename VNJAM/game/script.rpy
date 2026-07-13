@@ -31,8 +31,16 @@ image daisy idle smile:
     "images/daisy idle smile.png"
     zoom 0.4
     yoffset 100
+image daisy idle closed eyes:
+    "images/daisy idle closed eyes.png"
+    zoom 0.4
+    yoffset 100
 image daisy anxious:
     "images/daisy anxious.png"
+    zoom 0.4
+    yoffset 100
+image daisy pain and sweat:
+    "images/daisy pain and sweat.png"
     zoom 0.4
     yoffset 100
 image daisy crying:
@@ -91,7 +99,10 @@ image angel idle:
     "images/angel idle.png"
     zoom 0.4
     yoffset 100
-
+image angel idle closed eyes:
+    "images/angel idle closed eyes.png"
+    zoom 0.4
+    yoffset 100
 image angel confused:
     "images/angel confused.png"
     zoom 0.4
@@ -116,14 +127,7 @@ image angel pain closed nowing:
     "images/angel pain closed nowing.png"
     zoom 0.4
     yoffset 100
-image angel pain open:
-    "images/angel pain open.png"
-    zoom 0.4
-    yoffset 100
-image angel pain closed:
-    "images/angel pain closed wing.png"
-    zoom 0.4
-    yoffset 100
+
 image angel happy:
     "images/angel happy.png"
     zoom 0.4
@@ -148,6 +152,117 @@ image angel shadowed:
     "images/angel shadowed.png"
     zoom 0.4
     yoffset 100
+
+
+layeredimage angel idle wings:
+
+    always:
+        "images/wings.png"
+    always:
+        "images/angel idle.png"
+        xoffset 360
+
+    zoom 0.4
+    yoffset 100
+layeredimage angel pain open:
+    always:
+        "images/wings.png"
+    always:
+        "images/angel pain open.png"
+        xoffset 360
+    zoom 0.4
+    yoffset 100
+layeredimage angel pain closed:
+    always:
+        "images/wings.png"
+    always:
+        "images/angel pain closed wing.png"
+        xoffset 360
+    zoom 0.4
+    yoffset 100
+layeredimage angel idle closed eyes wings:
+    always:
+        "images/wings.png"
+    always:
+        "images/angel idle closed eyes.png"
+        xoffset 360
+    zoom 0.4
+    yoffset 100
+layeredimage angel confused wings:
+    always:
+        "images/wings.png"
+    always:
+        "images/angel confused.png"
+        xoffset 360
+    zoom 0.4
+    yoffset 100
+layeredimage angel desire wings:
+    always:
+        "images/wings.png"
+    always:
+        "images/angel desire.png"
+        xoffset 360
+    zoom 0.4
+    yoffset 100
+layeredimage angel frown wings:
+    always:
+        "images/wings.png"
+    always:
+        "images/angel frown.png"
+        xoffset 360
+    zoom 0.4
+    yoffset 100
+layeredimage angel pain wings:
+    always:
+        "images/wings.png"
+    always:
+        "images/angel pain.png"
+        xoffset 360
+    zoom 0.4
+    yoffset 100
+layeredimage angel happy wings:
+    always:
+        "images/wings.png"
+    always:
+        "images/angel happy.png"
+        xoffset 360
+    zoom 0.4
+    yoffset 100
+layeredimage angel happy big wings:
+    always:
+        "images/wings.png"
+    always:
+        "images/angel happy big.png"
+        xoffset 360
+    zoom 0.4
+    yoffset 100
+layeredimage angel obsessed wings:
+    always:
+        "images/wings.png"
+    always:
+        "images/angel obsessed.png"
+        xoffset 360
+    zoom 0.4
+    yoffset 100
+layeredimage angel sad wings:
+    always:
+        "images/wings.png"
+    always:
+        "images/angel sad.png"
+        xoffset 360
+    zoom 0.4
+    yoffset 100
+layeredimage angel scary wings:
+    always:
+        "images/wings.png"
+    always:
+        "images/angel scary.png"
+        xoffset 360
+    zoom 0.4
+    yoffset 100
+
+
+
 image black alpha:
     "images/black screen.png"
     alpha 0.5
@@ -382,7 +497,7 @@ label start:
     "I can already imagine it. She invites her new friends over, they’re loud as hell in the living room."
     "I work up the courage to leave my room to get a glass of water, something to eat, anything- as soon as I step out they immediately go silent, briefly sneaking glances at me from the corners of their eyes. "
     "The second I slam my door, they go back to laughing, whispering about how weird Samyaza’s roommate is."
-    "Quiet enough to feign ignorance (“We were talking about someone else!”- yeah right, bitch,) but loud enough that the roommate in question can still hear it even if she tries her absolute hardest to pretend they’re not there."
+    "Quiet enough to feign ignorance (“We were talking about someone else!”- yeah right, bitch.) but loud enough that the roommate in question can still hear it even if she tries her absolute hardest to pretend they’re not there."
     "They’re absolutely hysterical, shrieking like hyenas over how weird Samyaza’s roommate is. She’d laugh and agree, and talk about how much she couldn’t wait to move out."
     show daisy anxious
     "I can’t let that happen this time. I have to prove to her that I’m good at all of these things.{p}That I can function as a human being for once."
@@ -1795,9 +1910,9 @@ label start:
     show daisy idle
     "Tomorrow Samyaza and I are going to do the ritual."
     show daisy anxious
-    "{cps=*4}But I don’t wanna do it, I really don’t, maybe if I get hungover enough we can delay it.{/cps}"
-    "{cps=*4}The idea of her leaving me as quickly as she met me is too much for me right now.{/cps}"
-    "{cps=*4}I wonder how Anya would feel about her- the fact that I have someone else besides her now.{/cps}"
+    "{cps=*3}But I don’t wanna do it, I really don’t, maybe if I get hungover enough we can delay it.{/cps}"
+    "{cps=*3}The idea of her leaving me as quickly as she met me is too much for me right now.{/cps}"
+    "{cps=*3}I wonder how Anya would feel about her- the fact that I have someone else besides her now.{/cps}"
 
     "Anya grabs my wrist- the same one that was burnt by Samyaza. {nw}"
     show daisy angry
@@ -1811,14 +1926,14 @@ label start:
     "Anya thankfully turns away from me and releases her hand from my wrist."
     "{b}Good.{/b}"
     "{b}It’s not hers.{/b}"
-    "{cps=*4}Her grip isn’t as good as Samyaza’s, Samyaza feels strong, maybe it’s because she’s an angel or whatever she is I don't even know but it’s magical and beautiful.{/cps}"
+    "{cps=*3}Her grip isn’t as good as Samyaza’s, Samyaza feels strong, maybe it’s because she’s an angel or whatever she is I don't even know but it’s magical and beautiful.{/cps}"
     "She makes me feel safe. {b}Nothing like Anya.{/b}"
 
     show black screen with dissolve
     "As she introduces me to everyone, I dart around looking for more alcohol."
-    "{cps=*4}They don’t care about me anyways, they only care about Anya. I don’t care about anyone here, I wish I had invited Samyaza with me. Why didn’t I invite her?{/cps}"
+    "{cps=*3}They don’t care about me anyways, they only care about Anya. I don’t care about anyone here, I wish I had invited Samyaza with me. Why didn’t I invite her?{/cps}"
     "Maybe because I want her for myself, how terrible."
-    "{cps=*4}I’m so bad I wish I could bash my head in with my glass right now and bleed out everyone would be so shocked but then Anya would call Samyaza and Samyaza would take care of me."
+    "{cps=*3}I’m so bad I wish I could bash my head in with my glass right now and bleed out everyone would be so shocked but then Anya would call Samyaza and Samyaza would take care of me."
     
     hide daisy
     show black behind daisy
@@ -1882,17 +1997,17 @@ label start:
     #[HAPPY SPRITE] 
     extend "with her {b}real friends.{/b}"
     "They shriek and squeal at almost every other thing Anya says."
-    "{cps=*4}She’s so so much funnier than me she’s so much prettier so they can laugh at her and look at her cause she’s so easy on the eyes.{/cps}"
+    "{cps=*3}She’s so so much funnier than me she’s so much prettier so they can laugh at her and look at her cause she’s so easy on the eyes.{/cps}"
     show daisy angry
     "I’m a fucking eyesore next to her."
     show daisy upset
-    "{cps=*4}I want to stay in the group. No, I don’t want to. No, I think I want to. I don’t know.{/cps}"
+    "{cps=*3}I want to stay in the group. No, I don’t want to. No, I think I want to. I don’t know.{/cps}"
     show daisy angry
 
-    "{cps=*4}When I’d talk they’d just wait for Anya to start talking because Anya is better, why don’t they go ahead and rip the bandaid off, tell me to shut up.{/cps}"
+    "{cps=*3}When I’d talk they’d just wait for Anya to start talking because Anya is better, why don’t they go ahead and rip the bandaid off, tell me to shut up.{/cps}"
     
-    "{cps=*4}I would lose balance and every time I did I was just waiting to feel everyone's hands on me, as they pushed me down.{/cps}"
-    "{cps=*4}{b}It’s bound to happen.{/b}{/cps}"
+    "{cps=*3}I would lose balance and every time I did I was just waiting to feel everyone's hands on me, as they pushed me down.{/cps}"
+    "{cps=*3}{b}It’s bound to happen.{/b}{/cps}"
 
     show daisy upset
     d "I need to go to the bathroom."
@@ -2020,8 +2135,8 @@ label start:
     "It's not like I could walk straight."
     "I definitely couldn't, but I would be lying if I said that I didn't make myself tumble more than I should've, because everytime I did, Samyaza would hold me back up."
     "She's so strong and so beautiful and so warm."
-    "{cps=*4}It feels so good to have my body make any kind of contact with her whatsoever and I just want to feel more and more and {b}more{/b}. I just want her {w=.5}{nw}"
-    "{cps=*4}It feels so good to have my body make any kind of contact with her whatsoever and I just want to feel more and more and {b}more{/b}. I just {fast}to become a part of her so that I can be hers and only hers."
+    "{cps=*3}It feels so good to have my body make any kind of contact with her whatsoever and I just want to feel more and more and {b}more{/b}. I just want her {w=.5}{nw}"
+    "{cps=*3}It feels so good to have my body make any kind of contact with her whatsoever and I just want to feel more and more and {b}more{/b}. I just {fast}to become a part of her so that I can be hers and only hers."
 
     show angel frown
     s "Hey, drink some water."
@@ -2038,7 +2153,7 @@ label start:
     show daisy sappy
     d "I’m so tired."
 
-    "I lay my head on her, she’s much taller than me and {cps=*4}it feels so good.{/cps}{p=1}Her arm around me feels so good."
+    "I lay my head on her, she’s much taller than me and {cps=*3}it feels so good.{/cps}{p=1}Her arm around me feels so good."
     "God, please don’t let it end."
     "I’m {b}begging{/b} you."
 
@@ -3543,7 +3658,7 @@ label start:
     a "This is what I mean! Y-{w=1}{nw}"
 
     show daisy upset
-    d "{cps=*2}You’ll never understand the love I have for Samyaza, and the love she has for me. You’re jealous that someone like me can find love.{/cps}"
+    d "{cps=*2}You’ll never understand the love I have for Samyaza, and the love she has for me. You’re jealous that something like me can find love.{/cps}"
     show anya upset
     a "{b}No!{/b} No, Daisy, that’s not it! Samyaza must be putting some controlling shit in your head or something. Daisy, this relationship is not healthy."
     
@@ -3577,6 +3692,7 @@ label start:
     "Stirring, I see Samyaza crouched next to me. Her lips slightly parted."
     #[♫STAY WITH ME♫]
     play music wav_stay_with_me volume 2
+
     show angel sad at scene_center
     show angel at flip:
         ypos 1600
@@ -3820,6 +3936,624 @@ label start:
     s "Huh? What did you say?"
 
     d "...Nevermind."
+
+    
+    #EXT. UNIVERSITY PARK - DAY
+    scene yuri_park_01
+    show daisy idle at scene_right
+    with Fade(1,2,1)
+    "The air is crisp. It’s beginning to cool down.{p=1}I wish Samyaza could stay long enough so she could feel the cold air hitting her skin on a fall day." #Or to feel the snow.
+
+    
+    stop music fadeout 1
+    au "Daisy!"
+    show anya idle at scene_left with moveinright
+    #[♫MUSIC STOP♫]
+    #[WIND BLOWING SFX]
+    show daisy nervous
+    "...Not again."
+    show angel scary at scene_center with dissolve
+    "Before I can even respond, Samyaza comes in between us."
+    #[♫STRANGER♫]
+    play music wav_stranger
+    s "Daisy, is she bothering you?"
+    
+    "I.. don’t know what to do."
+
+    show anya upset
+    a "Daisy, I saw you walking around, I just...{w=1} I just wanted to make sure you were okay."
+    show anya suspicious
+    "She shoots Samyaza an interrogative gaze. {nw}"
+    show anya idle
+    extend "But she makes sure to look back at me."
+
+    d "I’ve b-{nw}"
+    #SAMYAZA [cuts out last textbox]
+    show angel obsessed
+    s "{b}She’s fine.{/b}"
+
+    show anya suspicious
+    a "I’m not asking {b}you.{/b}"
+    show anya idle
+    a "Daisy, I’m glad to see you back in classes."
+    show daisy upset
+    "I look over to Samyaza, unsure what to do."
+
+    
+    s "If she hasn’t answered your texts, maybe she doesn’t want to talk to you, have you thought of that?"
+    show anya happy
+    a "Why don’t you let {i}Daisy{/i} answer."
+
+    show daisy nervous
+    show angel frown at flip
+    show anya idle
+    d "Uhh…"
+    
+    "Both of them stare at me.{p=1}Anya’s gaze makes my chest feel heavy.{p=1}Even when she’s trying to \"help\" me, I still feel like she’s judging me, scrutinizing me for being {b}weak. {/b}"
+
+    show daisy idle smile    
+    d "I’m fine. Anya, could you please leave us alone?"
+
+    show anya upset
+    a "Well...{w=.5} if that’s what y-{nw}"
+    show daisy anxious
+    show angel scary at unflip
+    s "Haven’t you realized that {i}you{/i} might be the reason that she’s not doing well?"
+
+    "Anya closes her eyes, and takes a deep breath.{p=1}She hesitates before giving her response."
+
+    show anya idle
+    a "Ok. I’ll respect that."
+    show anya at flip
+    "She turns away, {nw}"
+    show anya upset with {'master':moveinleft}:
+        xoffset -200
+    extend "and begins to walk off. {nw}{w=1}"
+    show anya upset at scene_center_offleft, unflip with {'master':moveinright}
+    extend "Until, suddenly she runs back towards me."
+
+    a "Daisy, let's talk one last time.{p=1}{nw}"
+    show daisy surprised
+    show anya suspicious
+    extend"Without her.{p=1} {nw}"
+    show anya idle
+    extend "Meet me here tomorrow, okay?"
+    show angel frown
+    show daisy nervous
+    "Samyaza grips my shoulder.{p=1}{nw}"
+    show angel scary
+    extend "She scowls at Anya so intensely that some nausea wells up within me."
+    show anya upset at flip with {'master':moveinleft}:
+        xoffset -800
+    "Anya walks off again.{p=1}Guess she didn't care about my answer."
+    show angel frown at flip
+    s "She’s such a bad influence on you. I hope you never see her again."
+
+    d "…"
+
+    s "You’re better off without her.{w=.5} I mean it.{w=.5} She’s not good for you.{w=.5} All she does is make you doubt yourself.{w=.5} {i}She doesn’t treat you like a human being.{/i}"
+
+    stop music fadeout 2
+    scene black screen with Dissolve(2)
+    #[♫MUSIC STOP♫]
+    #[♫WIND SFX♫]
+
+    "The walk back is silent. Occasionally, Aza asks me questions about human experiences."
+
+    "Honestly, everything since that confrontation is a blur.{p=1}Did I answer Aza's questions correctly?{p=1}To her, everything I say is perfect."
+
+    "Anya...{w=1} she's been such a sore spot for me for so long, but not having her in my life fills me with an indescribable feeling.{p=1}Some kind of bitterness, maybe- but anytime I try  think about it, I feel hot tears threaten to burst."
+    scene black screen with Dissolve(1)
+    #[FADE TO BLACK]
+    scene white screen with Dissolve(1)
+    #[FADE TO LIGHT]
+    scene yuri_park_01
+    show white screen:
+        alpha 0.3
+    with Dissolve(2)
+    #EXT. UNIVERSITY PARK - DAY [a bit brighter to indicate morning?]
+    #[♫WIND SFX]
+    show anya idle at scene_right,flip
+    with dissolve
+    "Anya's waiting on a bench.{w=1} She looks peaceful, looking up at the tree, illuminated by the early morning light."# Her face is resolute.
+
+    show daisy anxious at scene_left,flip with dissolve
+    d "Hi..."
+
+    show anya upset
+    a "Hey.{p=2}...We need to talk."
+
+    show daisy idle
+    d "About what?"
+
+    show anya suspicious
+    a "The way you’ve been…{w=1} you know."
+
+    show daisy surprised
+    d "What about it?"
+
+    show anya upset
+    a "You talk about being in love and whatnot-{w=.2} look, I’m happy for you, {i}really.{/i1}"
+
+    show daisy idle
+    d "And..?"
+
+    play music couch_fight_scene_v1 volume 2
+    show anya suspicious
+    a "Listen, I keep saying this, but you’re really freaking me out. You’re isolating yourself, you look like shit, I don’t know, I’m just worried…{w=1} It feels like you might be...{p=.3} relapsing."
+
+    "I sigh, rolling my eyes."
+    
+    d "And, so what? {w=.5}{nw}"
+    show daisy upset
+    extend "What if I was relapsing? What would you do? {nw}"
+    show daisy angry
+    extend "{cps=*2}I’m happier than I’ve ever been! Are you saying I look like shit when I’m happy? {size=*1.5}What the {b}hell{/b} do you want from me?{/size}{/cps}"
+
+    show anya upset
+    a "Daisy, you don’t have to get so defensive!{cps=*2} A week ago you literally had a bandage on your wrist, how am I not supposed to get freaked out? You’re acting like {/cps}how you did...{w=.5} once the friend group cut you off...{w=.5} And honestly, I don’t think Samyaza is helping much!"
+
+    d "{cps=*3}You always have to go back to that! It’s in the past! And you don’t know {i}shit{/i} about how I was back then! You were barely there for me! Unlike Samyaza, {i}she{/i} has a sixth sense for me.{/cps}"
+
+    a "I know... And for that I’ll forever be sorry."
+    show anya suspicious
+    a "But I can’t lie to myself. You look like you’re slipping back into... into whatever place you were in, back then.{w=2} I failed you before, Daisy, I don’t want to fail you again."
+
+    show daisy crying
+    d "{size=*2}{b}I DON’T NEED HELP!{/b}{/size}"
+    show anya upset
+    window hide
+    pause 2.0
+    window auto
+
+    a "{b}Daisy!{/b} Daisy, calm down! I’m not trying to attack you!"
+    show daisy upset at unflip
+    #"I sulk, looking away from her."
+
+    d "She...{w=3}{nw}"
+    show daisy idle
+    "I purse my lips before I can say anything. I squeeze my fists tight as I try to find the words for my feelings."
+    show anya suspicious
+    a "She… ?"
+    show daisy anxious at flip
+    d "…{w=1}She promised to ease my pain…{p=1}...She said I don’t have to be lonely anymore."
+
+    show anya upset
+    "I watch Anya sigh, and roll her eyes.{p=1}Does she respect me at all?{p=1}Respect my choices?{p=1}Does she even consider me human?"
+
+    show daisy idle smile
+    d "It’s okay! You’ve clearly never felt love like this, and I feel so sorry for you."
+
+    show anya suspicious
+    a "..?"
+
+    d "You’ve only ever had that one ex-{i}boy{/i}friend. The {b}cheater.{/b} {i}He didn’t really love you, so you’d never understand.{/i}"
+    show anya upset
+    "I don’t {b}care{/i} if that’s low hanging fruit.{p=1}She’s done it to me so many times before.{p=1}{b}Poor little Anya{/b} will live."
+
+    
+    a "Daisy, what the fuck!"
+    show daisy surprised
+    show black screen behind daisy with Dissolve(3):
+        alpha 0.4
+    "I’m caught slightly off guard- She’s actually angry, for once."
+    "I’m so used to her sucking up to me, playing the role of my fucking social worker.{p=.5} I rarely see her show an emotion that isn't passiveness or faux-niceness.{p=.5} My rottenness brings out this side of her, I guess." 
+    show daisy pain and sweat
+    "I flinch for a second."
+    hide black screen
+    show red screen behind daisy:
+        alpha 0.7
+    with Dissolve(3)
+    show daisy angry
+    "Fuck it.{p=1}I'm all in.{p=1}This is {b}my{/b} fucking grave and I’ll dig it as deep as I fucking want." 
+    hide red screen with dissolve
+    show daisy idle
+    d "I feel sorry for you, really"
+
+    show anya suspicious
+    a "You’re insane. You did not need to bring that up."
+    show daisy angry
+    d "{cps=*3}I’m insane for bringing it up, when you love putting me back to the worst years of my life!?{/cps}"
+    show anya upset
+    a "That’s because I’m fucking {b}worried{/b} about you, alright!? {w=.5}I don’t want you to fall back into that space. What about that is so hard to understand?"
+
+    d "{cps=*.25}If you were so worried, where were you before?{/cps}"
+
+    "She sighs.{w=2} It’s too late for her to back out now."
+
+    show anya suspicious
+    a "I’ve failed you before.{w=1} I know.{w=1} Daisy, I don’t know how to get you to believe me when I say how sorry I am."
+
+    d "{b}No.{/b} You only help me when it makes you {i}look good.{/i} If you {i}really{/i} cared you, would’ve actually stuck around to support me. Where the {b}fuck{/b} were you after high school."
+
+    show anya upset
+    a "You’re acting like your mother."
+
+    show daisy idle
+    d "There it is."
+    a "...What."
+
+    d "This whole fucking friendship bullshit between us, it was just an act, right? You don’t care, you never did."
+    show anya suspicious
+    a "...{w=2}And do you believe that?"
+    show daisy upset
+    show red screen behind daisy with Dissolve(7):
+        alpha 0.5
+    d "Yes.{i}I always have!{/i} Since the beginning. Every {b}single{/b} thing that you’ve done and said for me has been backhanded, and I’m not even talking about when we were in high school!"
+    d "The past few weeks, all you’ve been doing is reminding me about just how stunted my fucking life is, with how much you just bring up shit that doesn't fucking matter!"
+    d "You don’t listen to me, at ALL! Anytime you talk to me, it’s just about what YOU did or what YOU think about MY situation!"
+    d "Have you even thought about letting me speak for myself, or would that ruin your image of me as some helpless little bitch that needs to be coddled all the fucking time?"
+    d "Do you think I exist to make you {i}look better{/i} to all of your {b}dumbass{/b} friends that talk about how much of a mental case I am?"
+    show daisy angry
+    "{cps=*2}{b}God, I’m so fucking sick of you!{/b} I’m the happiest I’ve ever been in my life and it’s because I’m with Aza and because stopped talking to {size=*2}you.{/size} {/cps}"
+
+    show anya idle
+    a "Okay."
+    window hide
+    pause 1.0
+    window show
+    show daisy upset
+    "My breathing rags as I stare her down, waiting for her to continue.{p=1} She just sits there, unreadable."
+
+    
+    a "...I’m done with this. You clearly aren’t taking me in good faith."
+
+    show daisy angry
+    show anya at flip
+    d "You’re proving me right!"
+
+    "She doesn’t even look at me. {p=1}{nw}"
+    show anya at offscreenright with moveinleft
+    extend "She gathers her things, and walks away."
+    stop music fadeout 3
+    #[♫MUSIC FADE OUT♫]
+    #[WIND SFX AFTER FADEOUT]
+    show daisy idle
+    "A crisp wind blows past me." 
+    "I watch her go further and further into the horizon."
+    show daisy pain and sweat
+    "My entire body {cps=*.1}constricts{/cps} as an intense wave of nausea washes over me."
+
+
+
+    #INT. APARTMENT LIVING ROOM - NIGHT
+    #[AC SFX]
+    scene black screen with Dissolve(2)
+    scene yuri_living_room_night with {'master': Fade(0,3,2)}
+    
+    "The past few hours had melded together in my mind."
+    "I don’t know if I stood there in that park for hours, or absentmindedly attended class."
+    "I don’t even know. Some moments I feel anxious, and other times I feel nothing at all."
+    "I just feel numb."
+
+    "I guess Samyaza and I are doing the water ritual today."
+    "The muffled sounds of water flowing can be heard from the bathroom."
+    show daisy anxious at scene_right with moveinleft
+    "I slouch into the dining room.{p=1}Staring up into the ceiling I just.{w=5} Wait."
+
+    "My mind feels like it's betraying itself. Every time I play back the fight from earlier, it's like some third party comes in and {b}scribbles it out.{/b}"
+
+    #[DOOR OPEN SFX]
+    #[♫STAY WITH ME♫]
+    play music wav_stay_with_me
+    show angel confused at scene_left,flip with dissolve
+    s "Hey, where were you?"
+
+    d "…"
+    show daisy nervous with None
+    show angel behind daisy
+    show black screen behind daisy
+    with {'master': Dissolve(2)}
+
+    "Would Aza get mad if I told her the truth?{p=.5}I feel like I shouldn't.{p=.5}She was defending me, telling me Anya would just hurt me.{p=.5}She was right…"
+    "I should just lie."
+
+    window hide
+    pause 3.0
+    window auto
+    hide black screen 
+    show daisy anxious
+    with dissolve
+    d "...{w=1}{size=*.4}I was with Anya.{/size}"
+
+    show angel scary
+    d "Really?"
+    show daisy nervous
+    "I hunch in on myself."
+
+    #DAISY [neutral]
+    show daisy idle
+    d "Uhm.{w=1} Sorry."
+
+    #SAMYAZA [scary]
+    s "{b}Make sure you don’t see her again.{/b}"
+    show daisy anxious
+    d "...{w=1}{size=*.4}Okay.{/size}"
+    show angel frown
+    
+    s "I don’t want her upsetting you ever again."
+
+    d "...{size=*.6}Okay.{/size}"
+    show angel desire at scene_center_offright with {'master': moveinright}:
+        xoffset -100
+    "She walks over to me, and kisses my forehead."
+
+    s "{i}I{/i} like happy Daisy."
+    show daisy idle
+    #[daisy neutral sprite.]
+
+    show angel idle
+    s "Also, I need happy Daisy.{p=1}The bath is ready."
+    show daisy nervous
+    "I clutch my cardigan.{p=1} I knew it was going to happen, but I don’t feel ready."
+
+    d "...{size=*.6}Do I have to go naked..?{/size}"
+
+    show angel frown
+    s "Do you want the spell to work?"
+
+    "{b}No.{/b}"# I don’t."
+
+    show daisy idle
+    d "{size=*.8}I guess..."
+
+    #INT. BATHROOM - NIGHT
+    scene yuri_bathroom_01
+    show black screen:
+        alpha 0.3
+    show daisy anxious at scene_right_far
+    show angel idle at scene_center_offright, flip
+    with Fade(1,1,1)
+    camera:
+        perspective True
+        ease 3.0 zpos -700 xpos 450 ypos -250
+    window hide
+    pause 1.0
+    window auto
+    "Samyaza undresses first."
+
+    show angel desire 
+    s "I’m okay with waiting. I’ll wait as long as I need."
+
+    d "No...{w=1} It’s ok."
+
+    "I begin to take my cardigan off, but when I get to my shirt, {nw}"
+    show daisy surprised
+    extend "I feel Samyaza beginning to take it off me."
+    show daisy blush
+    
+    s "Let me help."
+    show daisy upset
+    "My heart is crawling out of my chest. Tears well up."
+    show angel confused
+    s "Should I stop?"
+
+    d "{size=*.7}...No. Go ahead.{/size}"
+    show angel desire
+    "Gently, she takes my shirt off.{p=1}Admiration fills her eyes, like I’m the most beautiful girl in the world."
+    show angel happy
+    "We take off my skirt together.{p=1}{nw}"
+    show daisy nervous at flip
+    "I look away, biting my lip once it’s off. Bracing myself for a comment."
+    window hide
+    pause 1.0
+    window auto
+    show angel desire
+    
+    s "...You’re so beautiful, Daisy"
+    show daisy crying at flip
+    "My eyes must be faulty, water uncontrollably leaks out.{p=1}She wipes my tears."
+    show purple screen with Dissolve(1):
+        alpha 0.3
+    show daisy idle
+    "We head into the warm bath.{p=.3}I notice a slight purple sheen."
+    show daisy idle smile
+    "I splash the water a bit. The candles from the first ritual are lit up, {nw}" 
+    show sigil_water at center with dissolve
+    extend "and there’s a sigil drawn on the tiles."
+    hide sigil_water with dissolve
+    
+    show angel idle closed eyes
+    "Samyaza does the usual- speaking in the strange language, starting the ritual."
+
+    show daisy anxious
+    d "Is there anything else we need to do?"
+
+    show angel idle
+    s "Not really, this is the preparation for the next step."
+    show angel idle closed eyes
+
+    show daisy idle
+    d "Ah."
+    #show daisy with moveintop:
+    #    ypos 1800
+    show daisy at flip
+    "I sink into the water." #{p=1}It covers half of my face. 
+    show angel desire
+    s "We can clean each other up, though.{p=1} Here, use this."
+
+    "She grabs a waxy substance, and starts rubbing it on my back. {p=.5}{nw}"
+    show daisy sappy
+    extend "I sink into her.{p=.5}I can’t see her face, but cheeks feel warm as she rubs my back."
+
+    d "This is nice..."
+
+    "She doesn’t say anything, and just keeps cleaning me up.{p=1}The smell of herbs and the warm water make my eyes begin to flutter shut."
+    show daisy blush
+    "Every time I feel like I’m going to fall asleep, she touches the small of my back, or cleans a sensitive area near my chest. "
+    show daisy at unflip
+    show angel idle wings behind daisy at unflip with dissolve
+    "After she’s done, she starts cleaning herself.{p=.5}I lay back and watch.{p=.5}Will her final angel form be any different?{p=.5}I hope she looks the same."
+
+    show daisy sappy
+    d "...{w=.5}I can clean your wings."
+
+    show angel happy wings 
+    s "It’s okay, I got it."
+
+    show daisy blush
+    d "No, really, I really want to."
+    show angel idle wings 
+    "She holds the wax away from me, but I reach up and grab it.{p=1}Our movement splashes water onto the floor mat."
+    show daisy sappy
+    "I take a glob of the substance and start to massage it into her half grown wings.{p=1}There’s some dried off blood on spots that would be easy to miss."
+
+    show angel frown wings
+    s "Really, Daisy, I could’ve done it."
+
+    show daisy happy
+    d "Nope. It’s my turn~"
+    show angel desire wings
+    "Her breathing becomes uneven as I rub her wings."
+
+    show daisy sappy
+    d "They’re so sensitive."
+
+    show angel pain wings
+    s "…{w=1}{size=*.75}They hurt…{/size}"
+
+    "I keep massaging.{p=1}{nw}"
+    show daisy blush
+    extend "She softly whines."
+
+    show daisy idle
+    d "...{w=.5}When you go back to heaven, you’ll have no one to do this for you."
+
+    show angel sad wings
+    s "…"
+    show daisy anxious
+    d "...{w=.5}I wish you’d stay.{p=1}...I could spend the rest of my life doing this."
+
+    show angel frown wings
+    "Daisy, You can’t have that mindset while doing this."
+
+    show daisy nervous with {'master': moveinleft}:
+        xoffset 100
+    "I pull away."
+
+    show daisy upset
+    d "Why not?!"
+    show angel idle wings at flip
+    "Samyaza contemplates, then {nw}"
+    show angel desire wings with {'master': moveinleft}:
+        xoffset 100
+    extend "smiles at me. {p=.5}She leans in for a kiss.{p=1}It’s not as inviting as the last ones.{p=2}I don’t kiss her back."
+    show angel idle wings
+    show daisy idle
+    s "…"
+
+
+    d "…"
+
+    #SAMYAZA
+    show angel happy wings
+    s "I think we’re clean enough.{w=.5} Let's get out."
+    scene black screen
+    #[BLACK SCREEN]
+    #[WATER DRAIN SFX]
+    #[♫MUSIC FADE OUT♫]
+    stop music fadeout 2
+
+    #INT. APARTMENT LIVING ROOM - DAY
+    #[AC SFX]
+    scene black screen with Dissolve(1)
+    camera:
+        xpos 0 ypos 0 zpos 0
+    scene yuri_living_room 
+    show daisy anxious at scene_center
+    with Fade(0,4,1)
+    "Samyaza is out on one of her supply runs again."
+
+
+    #ohhh my god
+    show black screen behind daisy with dissolve:
+        alpha 0.1
+    show daisy nervous
+    "Why doesn’t she invite me?"
+    show black screen behind daisy with dissolve:
+        alpha 0.2
+    show daisy crying
+    "Did I upset her last night?"
+    show black screen behind daisy with dissolve:
+        alpha 0.3
+    show daisy nervous
+    "{cps=*3}I keep replaying it in my head, scared that the whole Anya thing set me on edge, that I finally pushed Samyaza out.{/cps}"
+    show black screen behind daisy with dissolve:
+        alpha 0.4
+    show daisy idle
+    "{cps=*3}But, isn’t this what I expected?{/cps}"
+    show black screen behind daisy with dissolve:
+        alpha 0.5
+    show daisy anxious
+    "{cps=*3}This is what I’ve always hypothesized would happen if someone becomes involved with me.{/cps}"
+    show black screen behind daisy with dissolve:
+        alpha 0.6
+    show daisy pain and sweat
+    "{cps=*3}They’d get close enough to see within me, see my rotting core.{/cps}"
+    show black screen behind daisy with dissolve:
+        alpha 0.7
+    show daisy nervous
+    "{cps=*3}They hear my heart, it doesn’t beat like normal people’s hearts, it squelches.{/cps}"
+    show black screen behind daisy with dissolve:
+        alpha 0.8
+    show daisy angry
+    "{cps=*3}It’s disgusting, once you open me up that’s when you smell the stench.{/cps}"
+    show black screen behind daisy with dissolve:
+        alpha 0.9
+    show daisy crying
+    "{cps=*3}Samyaza smelled it, she realized I’m too much for her.{/cps}"
+
+    window hide
+    pause 1.0
+    window show
+
+    show daisy nervous
+    hide black screen with Dissolve(3)
+    "I pace around the living room.{p=.5}Or, she could just be doing private angel stuff?{p=.5}Who the hell am I kidding, maybe she wants to sacrifice me?{p=.5}...That doesn't sound as bad."
+
+
+    "KNOCK SFX"
+    show daisy surprised at flip, scene_right, with {'master': moveinright}
+    "I whip my head around, and run to the door."
+
+    #[CREAK SFX]
+    show daisy happy at flip, scene_center_offright, with {'master': moveinleft}
+    d "Samyaza!"
+
+
+    show daisy upset
+    "...Oh."
+    show anya idle at flip, scene_right_far with dissolve
+    a "...Hey."
+    #[♫FOUND YOU♫]
+    play music wav_found_you
+    show daisy angry
+    "I try to close the door, but she stops it with her foot."
+
+    show anya upset
+    a "I think...{p=1}I think I owe you this."
+
+
+    show daisy surprised
+    d "...What is it?"
+
+    show anya suspicious
+    a "I…{w=1} how do I put this..."
+    show anya upset
+    "She loudly gulps."
+
+    a "{cps=*3}I think we should take some time apart.{/cps}"
+    show daisy upset at scene_center, with {'master': moveinleft}
+    "...What..?"
+
+    a "...I want you in my life, Daisy.{w=.5} But right now, the things you’ve said to me are unacceptable.{w=.5} And honestly, I don’t know if {i}you{/i} want {i}me{/i} in your life."
+
+    d "What...{w=1} are you saying..?"
+
+
+    a "I already told you. We need to spend some time apart."
+
+
     stop music
     scene black screen
     "...DEMO END"
