@@ -30,6 +30,37 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+
+CREDITS
+
+Concept, Writing & Programming: Eri ‘tuftmouse’ ‘yurifig’
+
+Backgrounds & Additional Assets: abladeofgrass
+
+Character Design & Sprites: bnnuyboikase
+
+Assistant Character Art & Expressions: some freak called Claire
+
+Writing: Poppy
+
+
+SPECIAL THANKS TO
+
+Narrative Design: Shay Rodriguez
+
+Cowriting/Editing: Nathan B
+
+Music: Gaz Miller
+
+and an erispecialthanks to: Nia, and my playtester oomfies
+
+ADDITIONAL CREDITS/ASSETS
+
+BG music: {a=https://bellkalengar.itch.io/essential-game-music-pack}Bell Kalengar's Essential game music pack {/a}
+
+{a=https://makevisualnovels.itch.io/make-visual-novels-sep}Stella @ MakeVisualNovels Staging Enhancement Pack {/a}
+
+If you're reading this, go read all 100 hours of Umineko: When They Cry. It's worth it, I promise
 """)
 
 
