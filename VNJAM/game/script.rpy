@@ -4240,7 +4240,7 @@ label start:
     "Fuck it.{p=1}I'm all in.{p=1}This is {b}my{/b} fucking grave and I'll dig it as deep as I fucking want." 
     hide red screen with dissolve
     show daisy idle
-    d "I feel sorry for you, really"
+    d "I feel sorry for you, really."
 
     show anya suspicious
     a "You're insane. You did not need to bring that up."
@@ -4439,7 +4439,7 @@ label start:
     window auto
     show angel desire
     
-    s "...You're so beautiful, Daisy"
+    s "...You're so beautiful, Daisy."
     show daisy crying at flip
     "My eyes must be faulty, water uncontrollably leaks out.{p=1}She wipes my tears."
     show purple screen with Dissolve(1):
@@ -5353,8 +5353,8 @@ label start:
         zpos 130
         ypos 40
     #$ style.narrator_text.what_italic=False
-    creature "{cps=*.1}I smile.{/cps}"
-    creature "{cps=*.1}My wings flap, I feel so beautiful.{/cps}"
+    creature "{cps=*.1}I smile.{/cps}{w=1}{nw}"
+    creature "{cps=*.1}My wings flap, I feel so beautiful.{/cps}{w=1}{nw}"
 
     creature "{cps=*.1}{b}I'm so happy.{/b}{/cps}"
 

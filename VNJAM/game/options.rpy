@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "1.01"
+define config.version = "1.04"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -60,7 +60,9 @@ BG music: {a=https://bellkalengar.itch.io/essential-game-music-pack}Bell Kalenga
 
 {a=https://makevisualnovels.itch.io/make-visual-novels-sep}Stella @ MakeVisualNovels Staging Enhancement Pack {/a}
 
-If you're reading this, go read all 100 hours of Umineko: When They Cry. It's worth it, I promise
+For info about stock audio/images used, see {i}stock credits.txt{/i}
+
+Also, if you're reading this, go read all 100 hours of Umineko: When They Cry. It's worth it, I promise
 """)
 
 

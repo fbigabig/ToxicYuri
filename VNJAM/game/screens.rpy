@@ -401,9 +401,13 @@ style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
 
 style main_menu_title:
+    color "#FFFFFF"
+    outlines [ ((5), "#000", (0), (0)) ]
     properties gui.text_properties("title")
 
 style main_menu_version:
+    color "#FFFFFF"
+    outlines [ ((5), "#000", (0), (0)) ]
     properties gui.text_properties("version")
 
 
