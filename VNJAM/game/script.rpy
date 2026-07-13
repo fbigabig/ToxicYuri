@@ -3480,20 +3480,24 @@ label start:
 
 
     #[DOOR OPEN SFX]
+    play sound door_open
     scene black screen
     #[BLACK SCREEN]
     #[DOOR CLOSE SFX]
+
 
     "I force the yogurt down my throat."
     "I miss Samyaza."
     "Please, God.{p=1}If you’re working on our side, please make it so that she’s not replacing me with another girl."
 
     #[KNOCK SFX]
+    play sound door_knock
 
     "I don’t even feel myself getting up.{p=1}It's like I’m watching myself through the window."
     "I open the door."
 
     #[DOOR CREAK OPEN SFX]
+    play sound door_open
     scene yuri_living_room with dissolve
     "I don’t know who I expected to show up."
     show anya upset at scene_right, flip
@@ -3567,12 +3571,12 @@ label start:
     scene room daisy night with Fade(0,2,1)
     #INT. APARTMENT LIVING ROOM - NIGHT
     #[AC SFX]
+    play sound ac_hum volume 0.1 loop
     "I must have forgotten to lock my door."
     "I wake up to a hot hand holding mine, and an embrace like a warm blanket."
     "Stirring, I see Samyaza crouched next to me. Her lips slightly parted."
     #[♫STAY WITH ME♫]
     play music wav_stay_with_me volume 2
-    play music AC_hum
     show angel sad at scene_center
     show angel at flip:
         ypos 1600
@@ -3727,6 +3731,7 @@ label start:
     show daisy sappy
     "I lean into her hug. I could die in her arms."
     stop music fadeout 2.0
+    stop sound
     #[♫MUSIC FADES OUT♫]
     scene black screen with dissolve
     camera:
