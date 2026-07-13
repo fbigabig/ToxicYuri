@@ -17,6 +17,10 @@ define a = Character("Anya", color="FF0000")
 
 define audio.sad_music = "audio/by_your_side.ogg"
 define config.fadeout_audio = 0.3
+
+init python:
+  renpy.music.register_channel("sound2", "sfx",loop=False,tight=True)
+
 # The game starts here.
 
 image daisy idle:
@@ -197,6 +201,7 @@ label start:
     #EXT. UNIVERSITY PARK - DAY
     scene yuri_park_01 with fade
     play music wav_theres_no_heart_like_yours
+    play sound bird_chirping volume 0.1 loop
 
     show anya idle at scene_center_offleft
     a "You know, I really think you should come and meet my friends. They’re really funny. God, I remember one time where......"
@@ -285,7 +290,7 @@ label start:
     d "..Thanks.."
     stop music
     scene black screen with dissolve
-    #sfx
+    play sound ac_hum volume 0.1 loop
     play music wav_stay_with_me volume 2
     "The stale air of the hallway was suffocating.{w=.5} The scent of wet carpet and dust filled my nose as I tried to shut out all of the sounds of the oncoming students jestering with their peers."
     "I wanted to rush home, I couldn’t stand the noise.{w=.5} Honestly, it’s better for me to head home anyways.{w=.5} Anya was getting tired of me." 
@@ -561,7 +566,10 @@ label start:
     "What the fuck am I doing?{fast}"
     "Something in me, a divine presence, picks me up, and I walk over to pick the handkerchief up."
     "I lay it down next to me again. And drift to sleep."
+
+
     #stop music
+    stop sound
     window auto
 
     scene yuri_living_room with  Dissolve(4.0)
@@ -591,6 +599,7 @@ label start:
     "Her smile shines on my face. It kind of hurts, like I’m looking directly at the sun on a hot summer day."
 
     "We take our bags and begin to walk over to our class."
+    play sound footstep_shuffle volume 0.2
     window auto
     scene yuri_classroom_01 with Fade(1,2,1)
     #INT - CLASSROOM - DAY
@@ -671,6 +680,7 @@ label start:
     show black screen
     hide black screen with Dissolve(0.5)
     play music wav_roadtrip
+    play sound crowd_noise volume 0.1
     "Samyaza slyly hands me over notes for the upcoming lecture. She must be a good student if she’s already this far ahead. Way better than me."
 
     "Sheepishly, I grab the notes and begin to copy them down."
@@ -678,11 +688,14 @@ label start:
     "I notice a cute little drawing on the corner. Poorly drawn versions of me and her diligently studying."
     show daisy happy
     "I rip it out to add to my scrapbook."
-
+   
 
     scene yuri_park_01 
     show daisy idle at scene_right_far
     show anya idle at scene_center, flip
+    
+    play sound2 bird_chirping volume 0.1
+
     camera:
         perspective False
         zpos 0
@@ -724,6 +737,9 @@ label start:
 
     
 
+    stop sound
+    stop sound2
+
     scene black screen with fade
     camera:
         perspective True
@@ -731,6 +747,7 @@ label start:
         xpos 350
         ypos -200
     scene yuri_living_room with dissolve
+    
     #INT- APARTMENT LIVING ROOM -  DAY
 
     show daisy idle at flip, scene_right_far
@@ -753,6 +770,7 @@ label start:
     show black screen
     hide black screen with Dissolve(0.1)
     pause 1.0
+    play sound bird_chirping volume 0.1
 
     camera:
         perspective True
@@ -775,6 +793,8 @@ label start:
     show angel happy
     "Samyaza brings the sandwich to my mouth, but it just falls against my cheek."
 
+    stop sound
+
     show angel sad
     "I’m such an alien, and aliens don’t eat human food. "
     show daisy upset
@@ -785,11 +805,14 @@ label start:
     show daisy surprised
     extend "like she’s opening a trash chute and puts the sandwich in it."
     
+    play sound bird_chirping volume 0.1
+
     $ renpy.music.set_pause(False, channel="music") 
 
     show daisy happy at unflip, scene_right_far
     "I start to cackle."
 
+    stop sound
     scene room daisy night with fade
     camera:
         perspective False
@@ -947,6 +970,7 @@ label start:
     show daisy at offscreenleft with moveinright
     "I turn my laptop off and run into my room. I shut the door behind me. "
 
+    play sound door_slam_multiple
     stop music
     hide daisy
 
@@ -970,9 +994,12 @@ label start:
 
     d "You’re only making it worse!!!"
 
+    play sound door_handle_jiggle
+
     "Samyaza’s voice quivers more and more. The knocking increases in intensity. "
 
     #[DOOR KNOB OPEN BUT ITS LOCKED SFX]
+    
 
     "My pillow is becoming damp with my tears."
 
@@ -1005,6 +1032,8 @@ label start:
         alpha 0.8
     show black screen
     hide black screen with dissolve
+    play sound door_open volume 0.5
+
     "A searingly bright white light is spilling from the bathroom door, the rest of the apartment is barely legible as the blinding light swallows it up."
     "My eyes {b}burn.{/b}"
     "It takes me seconds to process the gurgling that echoes through the house."
@@ -1554,10 +1583,16 @@ label start:
     pause 2
     window auto
     #[PHONE RING SFX]
+
+    play sound phone_ring volume 0.5 
+    show phone_inspect at scene_center with dissolve
+
     "My phone rings, cutting through the silence."
     show angel at unflip
     "Samyaza quickly turns, she patiently waits for me to answer."
 
+    hide phone_inspect with dissolve
+    #[fucky camera offset stuff is here]
     show daisy nervous
     d "Hello? Anya?"
 
@@ -1898,7 +1933,7 @@ label start:
 #(KNOCK SFX. KNOCK SFX)
     "I hear a knock at the door" #cut ater
     "{b}Not now, not now.{/b}"
-
+    play sound door_knock
 #ANYA (through the door)
     a "{size=*.75}Hey.. Daisy?{/size}"
     "Why don’t I have the the strength within me to yell {shader=zoom}{b}“FUCK OFF!”{/b}{/shader} at her." #took out what
@@ -1932,6 +1967,7 @@ label start:
     a "She said that she’s looking for you? But I can tell her you’re busy if you need some t-{w=3}{nw}"
 
     #(QUICK CUT TO INT. ANYA HOUSE - NIGHT. DAISY SPRITE IS SERIOUS) [SLAM SFX]
+    play sound door_slam
     scene black screen with Dissolve(.1)
 
     scene anya_house
@@ -2099,12 +2135,14 @@ label start:
     #[AC BLASTING SFX]
     scene room daisy with Fade(1,1,1)
     play music baz1_2 volume 3
+    play sound ac_hum volume 0.1 
 
     "Mouth agape, I stare up at my ceiling. My head’s absolutely pounding."
 
     "I hold my forehead, God, I don’t even want to {b}remember{/b} what I said last night."
 
     #[KNOCK SFX]
+    play sound2 door_knock
     "I hear knocks." #cut
     #[♫ 1-2 GAZ]
     "The only way to not die of embarrassment is clearly to hide under my covers."
@@ -2224,6 +2262,7 @@ label start:
     #[♫WHO ARE YOU♫]
     scene black screen with Dissolve(2)
     play music wav_who_are_you
+    play sound phone_ring
     #sfx
     "Samyaza's preparing the incense and the candles in the living room. I wish I could focus on the noise of her moving around instead of the {nw}"
     #sfx
@@ -2626,6 +2665,7 @@ label start:
     stop music fadeout 1
     #[♫MUSIC STOP♫]
     #[DOOR CREAK SFX]
+    play sound door_open
     show angel sad at scene_left, flip with moveinleft
     s "…Daisy..."
     show daisy nervous
@@ -2775,6 +2815,7 @@ label start:
 
     #[PHONE RING SFX] 
     #[♫MUSIC STOP♫]
+    play sound phone_ring
     $ renpy.music.set_pause(True, channel="music") 
     show daisy anxious
     "My phone rings." #cut
@@ -2858,6 +2899,7 @@ label start:
     scene yuri_park_01 with Fade(0,2,1)
     #[BUG SFX]
     #[OUTDOORS SFX]
+    play sound crickets_cicadas_looped volume 0.1 loop
     show daisy anxious  at scene_right,flip with dissolve
     "The sun is way too hot, which makes my headache throb even more."
     "This past weekend has felt like a dream."
@@ -2956,9 +2998,11 @@ label start:
     "My eye twitches. What is she even trying to imply here??"
     stop music
     #[♫MUSIC STOP♫]
+    stop sound
     "We stand in silence."
 
     #[WIND SFX]
+    play sound wind
 
     "I’m deluding myself. I don’t want to face the truth."
 
@@ -2980,6 +3024,7 @@ label start:
     "Whatever. She’s telling this to herself so she can feel like she did something, put in the bare minimum effort."
 
     "I storm off, heading wherever the wind takes me."
+    stop sound 
 
     scene yuri_living_room_night with Fade(1,2,1)
     #INT. APARTMENT LIVING ROOM - NIGHT
@@ -3036,6 +3081,8 @@ label start:
     extend "Let’s do it."
     #stop music
     #EXT. UNIVERSITY PARK - NIGHT
+    play sound crickets_cicadas_looped volume 0.05 loop
+    play sound2 wind volume 0.5 loop
     scene black screen
     show daisy anxious at scene_center
     show angel idle at scene_center_offleft, flip
@@ -3207,6 +3254,8 @@ label start:
     #[BLACK SCREEN]
     #[♫YOU ARE PERFECT♫]
     stop music
+    stop sound 
+    stop sound2
     #play sound "WAV_You_Are_Perfect.ogg"
     #play sound "wav_you_are_perfect.ogg"
     play music wav_you_are_perfect volume 2
@@ -3248,8 +3297,10 @@ label start:
     with dissolve
     "I’m wide awake. Samyaza is engulfed in a blinding aura. Pockets of lights seep through every hole in her body. It looks like daytime."
 
+    play sound screen_shake
     show angel pain closed with vpunch
     s "AAAGGHH..!"
+
 
     "Her wings keep contracting in and out, they’re unable to reach past the halfway point. {nw}"
     show red screen with {'master': dissolve}:
@@ -3307,6 +3358,8 @@ label start:
     #[♫MUSIC STOP♫]
     #[WIND SFX]
     #[CRICKETS SFX]
+    play sound crickets_cicadas_looped volume 0.05 loop
+    play sound2 wind volume 0.5 loop
 
     d "...You should’ve had another roommate."
 
@@ -3351,6 +3404,8 @@ label start:
     "I get up, pull Samyaza up, and help her walk back to the apartment."
 
     stop music
+    stop sound 
+    stop sound2
 
     camera:
         xpos 0 ypos 0 zpos 0
@@ -3360,6 +3415,7 @@ label start:
     #[♫WHY DID YOU LEAVE♫] 
     #OR
     #[AC SFX]
+    play sound ac_hum volume 0.1 loop
 
     "Once Samyaza washes up, she tries to talk to me again."
     "But, do I have the right to accept her love?"
@@ -3516,6 +3572,7 @@ label start:
     "Stirring, I see Samyaza crouched next to me. Her lips slightly parted."
     #[♫STAY WITH ME♫]
     play music wav_stay_with_me volume 2
+    play music AC_hum
     show angel sad at scene_center
     show angel at flip:
         ypos 1600
