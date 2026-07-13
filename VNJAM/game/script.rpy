@@ -4932,7 +4932,7 @@ label start:
     show angel happy big
     extend "I think I know a way to change it.{w=.5}{nw}"
 
-    extend " We can do it tomorrow, if I'm right.{p=.5} We can stay together."
+    extend " We can do it tomorrow, if I'm right.{p=.5}We can stay together."
     show daisy idle at scene_center_offleft with {'master': moveinright}
     "Weakly, I smile, and give her a hug.{p=1}{nw}"
 
