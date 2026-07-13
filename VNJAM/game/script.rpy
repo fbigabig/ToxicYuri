@@ -3956,6 +3956,7 @@ label start:
     "Before I can even respond, Samyaza comes in between us."
     #[♫STRANGER♫]
     play music wav_stranger
+    play sound wind
     s "Daisy, is she bothering you?"
     
     "I.. don’t know what to do."
@@ -4037,6 +4038,7 @@ label start:
     scene black screen with Dissolve(2)
     #[♫MUSIC STOP♫]
     #[♫WIND SFX♫]
+    play sound wind volume 0.5 loop
 
     "The walk back is silent. Occasionally, Aza asks me questions about human experiences."
 
@@ -4208,6 +4210,7 @@ label start:
     stop music fadeout 3
     #[♫MUSIC FADE OUT♫]
     #[WIND SFX AFTER FADEOUT]
+    play sound wind
     show daisy idle
     "A crisp wind blows past me." 
     "I watch her go further and further into the horizon."
@@ -4220,6 +4223,8 @@ label start:
     #[AC SFX]
     scene black screen with Dissolve(2)
     scene yuri_living_room_night with {'master': Fade(0,3,2)}
+    stop sound
+    play sound ac_hum volume 0.1 loop
     
     "The past few hours had melded together in my mind."
     "I don’t know if I stood there in that park for hours, or absentmindedly attended class."
@@ -4235,6 +4240,7 @@ label start:
 
     #[DOOR OPEN SFX]
     #[♫STAY WITH ME♫]
+    play sound door_open
     play music wav_stay_with_me
     show angel confused at scene_left,flip with dissolve
     s "Hey, where were you?"
@@ -4452,10 +4458,12 @@ label start:
     #[BLACK SCREEN]
     #[WATER DRAIN SFX]
     #[♫MUSIC FADE OUT♫]
+    play sound water_draining
     stop music fadeout 2
 
     #INT. APARTMENT LIVING ROOM - DAY
     #[AC SFX]
+    play sound ac_hum volume 0.1 loop
     scene black screen with Dissolve(1)
     camera:
         xpos 0 ypos 0 zpos 0
@@ -4511,12 +4519,12 @@ label start:
     hide black screen with Dissolve(3)
     "I pace around the living room.{p=.5}Or, she could just be doing private angel stuff?{p=.5}Who the hell am I kidding, maybe she wants to sacrifice me?{p=.5}...That doesn't sound as bad."
 
-
-    "KNOCK SFX"
+    play sound door_knock
     show daisy surprised at flip, scene_right, with {'master': moveinright}
     "I whip my head around, and run to the door."
 
     #[CREAK SFX]
+    play sound door_open
     show daisy happy at flip, scene_center_offright, with {'master': moveinleft}
     d "Samyaza!"
 
